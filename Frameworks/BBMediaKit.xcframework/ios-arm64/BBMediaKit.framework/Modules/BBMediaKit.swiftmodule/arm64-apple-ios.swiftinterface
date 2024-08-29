@@ -1,0 +1,180 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BBMediaKit
+import AVFoundation
+import AVKit
+@_exported import BBMediaKit
+import CoreGraphics
+import CoreVideo
+import Foundation
+import Metal
+import MetalKit
+import QuartzCore
+import Swift
+import TimecodeKit
+import UIKit
+import VideoToolbox
+import Vision
+import ZIPFoundation
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import simd
+public typealias DownloadCompletionBlock = (_ error: (any Swift.Error)?, _ fileUrl: Foundation.URL?) -> Swift.Void
+public typealias BackgroundDownloadCompletionHandler = () -> Swift.Void
+@_hasMissingDesignatedInitializers public class DownloadItem : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct DownloadManagerConfig {
+  public var maximumRetries: Swift.Int
+}
+@objc @_inheritsConvenienceInitializers final public class DownloadManager : ObjectiveC.NSObject, Foundation.URLSessionDelegate, Foundation.URLSessionDownloadDelegate {
+  public static let shared: BBMediaKit.DownloadManager
+  final public var configuration: BBMediaKit.DownloadManagerConfig
+  final public var backgroundDownloadCompletionHandler: BBMediaKit.BackgroundDownloadCompletionHandler?
+  final public func addDownload(url: Foundation.URL, destinationURL: Foundation.URL, onCompletion completionBlock: @escaping BBMediaKit.DownloadCompletionBlock)
+  final public func cancelAllDownloads()
+  final public func cancelDownload(withURL url: Foundation.URL)
+  @objc final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @objc final public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension BBMediaKit.DownloadManager {
+  final public var downloads: [Foundation.URL] {
+    get
+  }
+  final public var downloadsItems: [BBMediaKit.DownloadItem] {
+    get
+  }
+  final public func downloadItem(withURL url: Foundation.URL) -> BBMediaKit.DownloadItem?
+  final public func deleteDownloadItem(_ downloadItem: BBMediaKit.DownloadItem)
+  final public func deleteDownload(url: Foundation.URL)
+  final public func deleteAllDowndloads()
+}
+extension Foundation.FileManager {
+  public func documentsDirectoryURL() -> Foundation.URL
+  public func archivesDirectoryURL() -> Foundation.URL
+  public func adsDirectoryURL() -> Foundation.URL
+}
+public struct BBMetadataItem {
+  public let time: CoreMedia.CMTime
+  public let timestamp: Swift.Int64
+  public let offset: Swift.Int
+  public var timecodeString: Swift.String?
+  public var frames: Swift.Int?
+  public init?(avMetadataItem: AVFoundation.AVMetadataItem)
+}
+public enum BBFpsOption : Swift.Double {
+  case fps59
+  case fps29
+  public init?(rawValue: Swift.Double)
+  public typealias RawValue = Swift.Double
+  public var rawValue: Swift.Double {
+    get
+  }
+}
+public struct BBSessionConfiguration {
+  public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", isMediaReady: Swift.Bool = false)
+}
+@objc @_hasMissingDesignatedInitializers final public class BBMetadataWorker : ObjectiveC.NSObject {
+  @objc deinit
+  final public func readMetadata(forKey key: Swift.String) -> BBMediaKit.BBMetadata?
+  final public func deleteMetadata(forKey key: Swift.String)
+  final public func shouldStartAugmentation() -> Swift.Bool
+  final public func isReadyForAugmentation() -> Swift.Bool
+  final public func removeAllAds()
+  final public func clearMetadata()
+  final public func updateCurrentTimecode(_ timecode: Foundation.TimeInterval)
+  final public func startLoadingMetadata(from startTime: Foundation.TimeInterval)
+  final public func stopLoadingMetadata(_ shouldClearDownloads: Swift.Bool = false)
+}
+public protocol BBMediaSessionDelegate : AnyObject {
+  func mediaSessionDidBegin(_ sender: BBMediaKit.BBMediaSession)
+  func mediaSessionDidEnd(_ sender: BBMediaKit.BBMediaSession)
+  func mediaSession(_ sender: BBMediaKit.BBMediaSession, pixelBuffer: CoreVideo.CVPixelBuffer, itemTime: CoreMedia.CMTime, displayTime: CoreMedia.CMTime)
+  func mediaSession(_ sender: BBMediaKit.BBMediaSession, pixelBuffer: CoreVideo.CVPixelBuffer, itemTime: CoreMedia.CMTime, displayTime: CoreMedia.CMTime, augmentationMetadata: BBMediaKit.BBMetadata)
+  func mediaSession(_ sender: BBMediaKit.BBMediaSession, metadataItem: BBMediaKit.BBMetadataItem)
+}
+@objc public class BBMediaSession : ObjectiveC.NSObject {
+  weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)?
+  weak public var contentView: UIKit.UIView? {
+    get
+    set
+  }
+  public var configuration: BBMediaKit.BBSessionConfiguration? {
+    get
+    set
+  }
+  public var isDebug: Swift.Bool {
+    get
+    set
+  }
+  public init(player: AVFoundation.AVPlayer, frameRate: BBMediaKit.BBFpsOption)
+  @objc deinit
+  @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  public func begin()
+  public func end()
+}
+extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
+  @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
+}
+public class BBMetadata : Swift.Codable {
+  final public let canvasSize: BBMediaKit.CanvasSize
+  final public let placeholdersMap: [Swift.String : BBMediaKit.Placeholder]?
+  final public let processingHeight: Swift.Int
+  final public let processingWidth: Swift.Int
+  final public let sourceFormat: BBMediaKit.SourceFormat
+  final public let timecode: Swift.String
+  public var placeholders: [BBMediaKit.Placeholder]? {
+    get
+  }
+  public init(canvasSize: BBMediaKit.CanvasSize = CanvasSize(height: 0, width: 0), placeholders: [Swift.String : BBMediaKit.Placeholder], processingHeight: Swift.Int = 100, processingWidth: Swift.Int = 100, sourceFormat: BBMediaKit.SourceFormat = SourceFormat(fps: 29.98, height: 100, interlaced: false, width: 200), timecode: Swift.String)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct CanvasSize : Swift.Codable {
+  public let height: Swift.Int, width: Swift.Int
+  public init(height: Swift.Int, width: Swift.Int)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public class Placeholder : Swift.Codable, Swift.Equatable {
+  public static func == (lhs: BBMediaKit.Placeholder, rhs: BBMediaKit.Placeholder) -> Swift.Bool
+  final public let corners: [BBMediaKit.Corner]
+  final public let height: Swift.Int
+  final public let maskX: Swift.Double, maskY: Swift.Double
+  public var name: Swift.String
+  final public let tranform: [Swift.Float]
+  final public let width: Swift.Int
+  public var alphaChannel: [Swift.UInt8]
+  public var image: UIKit.UIImage?
+  public init(corners: [BBMediaKit.Corner] = [Corner(x: 10, y: 10)], height: Swift.Int = 100, maskX: Swift.Double = 0.0, maskY: Swift.Double = 0.0, name: Swift.String = "Test", tranform: [Swift.Float] = [0,0,0,0,0,0,0,0,0], width: Swift.Int = 100, alphaChannel: [Swift.UInt8] = [0], image: UIKit.UIImage? = nil)
+  public func makeImageWith(timecode: Swift.String?)
+  public func applyAlpha(_ alpha: [Swift.UInt8])
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct Corner : Swift.Codable {
+  public let x: Swift.Double, y: Swift.Double
+  public init(x: Swift.Double, y: Swift.Double)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SourceFormat : Swift.Codable {
+  public let fps: Swift.Double
+  public let height: Swift.Int
+  public let interlaced: Swift.Bool
+  public let width: Swift.Int
+  public init(fps: Swift.Double, height: Swift.Int, interlaced: Swift.Bool, width: Swift.Int)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension BBMediaKit.BBFpsOption : Swift.Equatable {}
+extension BBMediaKit.BBFpsOption : Swift.Hashable {}
+extension BBMediaKit.BBFpsOption : Swift.RawRepresentable {}
