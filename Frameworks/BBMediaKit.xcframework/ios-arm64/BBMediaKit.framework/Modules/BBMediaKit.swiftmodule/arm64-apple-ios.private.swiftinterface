@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BBMediaKit
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BBMediaKit
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
 @_exported import BBMediaKit
@@ -113,9 +114,10 @@ public protocol BBMediaSessionDelegate : AnyObject {
     get
     set
   }
-  public init(player: AVFoundation.AVPlayer, frameRate: BBMediaKit.BBFpsOption)
+  public init?(playerLayer: QuartzCore.CALayer? = nil, player: AVFoundation.AVPlayer? = nil, configuration: BBMediaKit.BBSessionConfiguration)
   @objc deinit
   @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  public func toggle(isEnabled: Swift.Bool)
   public func begin()
   public func end()
 }
