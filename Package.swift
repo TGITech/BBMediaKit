@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "BBMediaAugmentationKit",
-            targets: ["BBMediaKit"]
+            targets: ["BBMediaKitWrapper"]
         ),
     ],
     dependencies: [
@@ -21,7 +21,15 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "BBMediaKit",
-            path: "./Frameworks/BBMediaKit.xcframework"
+            path: "Frameworks/BBMediaKit.xcframework"
+        ),
+        .target(
+            name: "BBMediaKitWrapper",
+            dependencies: [
+                .target(name: "BBMediaKit"),
+                .product(name: "TimecodeKit", package: "TimecodeKit"),
+                .product(name: "ZIPFoundation", package: "ZIPFoundation")
+            ]
         )
     ]
 )
