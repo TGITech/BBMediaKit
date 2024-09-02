@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "BBMediaAugmentationKit",
-            targets: ["BBMediaKit"]
+            targets: ["BBMediaKit", "BBMediaKitSDK"]
         ),
     ],
     dependencies: [
