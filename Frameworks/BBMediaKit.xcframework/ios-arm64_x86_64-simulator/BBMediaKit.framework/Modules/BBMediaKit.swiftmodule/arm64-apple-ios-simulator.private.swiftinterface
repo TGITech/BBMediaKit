@@ -12,7 +12,6 @@ import Metal
 import MetalKit
 import QuartzCore
 import Swift
-import TimecodeKit
 import UIKit
 import VideoToolbox
 import Vision
@@ -21,6 +20,21 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import simd
+extension BBMediaKit.BBTimecode {
+  public enum Format {
+    case `default`
+    case duplicated
+    case metadataFull
+    case metadataShort
+    case metadata_v1
+    public static func == (a: BBMediaKit.BBTimecode.Format, b: BBMediaKit.BBTimecode.Format) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func stringValue(format: BBMediaKit.BBTimecode.Format = .default) -> Swift.String
+}
 public typealias DownloadCompletionBlock = (_ error: (any Swift.Error)?, _ fileUrl: Foundation.URL?) -> Swift.Void
 public typealias BackgroundDownloadCompletionHandler = () -> Swift.Void
 @_hasMissingDesignatedInitializers public class DownloadItem : Swift.Codable {
@@ -61,6 +75,18 @@ extension Foundation.FileManager {
   public func archivesDirectoryURL() -> Foundation.URL
   public func adsDirectoryURL() -> Foundation.URL
 }
+extension BBMediaKit.BBTimecode {
+  public struct Components {
+  }
+}
+extension BBMediaKit.BBTimecode.Components {
+  public static func components(days: Swift.Int = 0, hours: Swift.Int = 0, minutes: Swift.Int = 0, seconds: Swift.Int = 0, frames: Swift.Int = 0) -> BBMediaKit.BBTimecode.Components
+  public static let zero: BBMediaKit.BBTimecode.Components
+}
+public struct BBTimecode {
+  public var components: BBMediaKit.BBTimecode.Components
+  public var properties: BBMediaKit.BBTimecode.Properties
+}
 public struct BBMetadataItem {
   public let time: CoreMedia.CMTime
   public let timestamp: Swift.Int64
@@ -81,6 +107,11 @@ public enum BBFpsOption : Swift.Double {
 public struct BBSessionConfiguration {
   public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", isMediaReady: Swift.Bool = false)
 }
+extension BBMediaKit.BBTimecode {
+  public struct Properties {
+    public var frameRate: BBMediaKit.BBTimecodeFrameRate
+  }
+}
 @objc @_hasMissingDesignatedInitializers final public class BBMetadataWorker : ObjectiveC.NSObject {
   @objc deinit
   final public func readMetadata(forKey key: Swift.String) -> BBMediaKit.BBMetadata?
@@ -92,6 +123,10 @@ public struct BBSessionConfiguration {
   final public func updateCurrentTimecode(_ timecode: Foundation.TimeInterval)
   final public func startLoadingMetadata(from startTime: Foundation.TimeInterval)
   final public func stopLoadingMetadata(_ shouldClearDownloads: Swift.Bool = false)
+}
+extension BBMediaKit.BBTimecode {
+  public init(_ components: BBMediaKit.BBTimecode.Components, frameRate: BBMediaKit.BBTimecodeFrameRate)
+  public init(_ frameCount: BBMediaKit.BBTimecode.FrameCount, frameRate: BBMediaKit.BBTimecodeFrameRate)
 }
 public protocol BBMediaSessionDelegate : AnyObject {
   func mediaSessionDidBegin(_ sender: BBMediaKit.BBMediaSession)
@@ -123,6 +158,23 @@ public protocol BBMediaSessionDelegate : AnyObject {
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
   @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
+}
+public enum BBTimecodeFrameRate : Swift.String, Swift.CustomStringConvertible {
+  case fps29_97
+  case fps29_97d
+  case fps59_94
+  case fps59_94d
+  public var isDrop: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public class BBMetadata : Swift.Codable {
   final public let canvasSize: BBMediaKit.CanvasSize
@@ -177,6 +229,17 @@ public struct SourceFormat : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+extension BBMediaKit.BBTimecode {
+  public struct FrameCount {
+    public var frames: Swift.Int64
+    public static func frames(_ frames: Swift.Int64) -> BBMediaKit.BBTimecode.FrameCount
+  }
+}
+extension BBMediaKit.BBTimecode.Format : Swift.Equatable {}
+extension BBMediaKit.BBTimecode.Format : Swift.Hashable {}
 extension BBMediaKit.BBFpsOption : Swift.Equatable {}
 extension BBMediaKit.BBFpsOption : Swift.Hashable {}
 extension BBMediaKit.BBFpsOption : Swift.RawRepresentable {}
+extension BBMediaKit.BBTimecodeFrameRate : Swift.Equatable {}
+extension BBMediaKit.BBTimecodeFrameRate : Swift.Hashable {}
+extension BBMediaKit.BBTimecodeFrameRate : Swift.RawRepresentable {}
