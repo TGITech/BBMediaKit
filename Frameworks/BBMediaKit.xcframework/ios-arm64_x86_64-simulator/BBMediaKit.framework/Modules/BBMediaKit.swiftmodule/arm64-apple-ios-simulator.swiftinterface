@@ -105,7 +105,7 @@ public enum BBFpsOption : Swift.Double {
   }
 }
 public struct BBSessionConfiguration {
-  public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", isMediaReady: Swift.Bool = false)
+  public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", isMediaReady: Swift.Bool = false, offsetFrames: Swift.Int = 0)
 }
 extension BBMediaKit.BBTimecode {
   public struct Properties {
