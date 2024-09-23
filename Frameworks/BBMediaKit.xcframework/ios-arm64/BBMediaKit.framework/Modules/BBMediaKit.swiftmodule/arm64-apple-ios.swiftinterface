@@ -88,12 +88,16 @@ public struct BBTimecode {
   public var properties: BBMediaKit.BBTimecode.Properties
 }
 public struct BBMetadataItem {
-  public let time: CoreMedia.CMTime
+  public let avMetadataItem: AVFoundation.AVMetadataItem
+  public let valueData: Foundation.Data
+  public let valueString: Swift.String
   public let timestamp: Swift.Int64
   public let offset: Swift.Int
-  public var timecodeString: Swift.String?
-  public var frames: Swift.Int?
-  public init?(avMetadataItem: AVFoundation.AVMetadataItem)
+  public let time: CoreMedia.CMTime
+  public let frames: Swift.Int64
+  public let timecode: BBMediaKit.BBTimecode
+  public let timecodeString: Swift.String
+  public init?(avMetadataItem: AVFoundation.AVMetadataItem, frameRate: Swift.Double)
 }
 public enum BBFpsOption : Swift.Double {
   case fps59
