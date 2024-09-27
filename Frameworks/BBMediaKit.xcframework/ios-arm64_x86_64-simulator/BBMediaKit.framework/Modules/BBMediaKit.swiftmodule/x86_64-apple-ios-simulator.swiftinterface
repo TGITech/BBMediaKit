@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BBMediaKit
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BBMediaKit
 import AVFoundation
 import AVKit
 @_exported import BBMediaKit
@@ -88,12 +87,16 @@ public struct BBTimecode {
   public var properties: BBMediaKit.BBTimecode.Properties
 }
 public struct BBMetadataItem {
-  public let time: CoreMedia.CMTime
+  public let avMetadataItem: AVFoundation.AVMetadataItem
+  public let valueData: Foundation.Data
+  public let valueString: Swift.String
   public let timestamp: Swift.Int64
   public let offset: Swift.Int
-  public var timecodeString: Swift.String?
-  public var frames: Swift.Int?
-  public init?(avMetadataItem: AVFoundation.AVMetadataItem)
+  public let time: CoreMedia.CMTime
+  public let frames: Swift.Int64
+  public let timecode: BBMediaKit.BBTimecode
+  public let timecodeString: Swift.String
+  public init?(avMetadataItem: AVFoundation.AVMetadataItem, frameRate: Swift.Double)
 }
 public enum BBFpsOption : Swift.Double {
   case fps59
@@ -105,7 +108,7 @@ public enum BBFpsOption : Swift.Double {
   }
 }
 public struct BBSessionConfiguration {
-  public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", isMediaReady: Swift.Bool = false)
+  public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", isMediaReady: Swift.Bool = false, offsetFrames: Swift.Int = 0)
 }
 extension BBMediaKit.BBTimecode {
   public struct Properties {
