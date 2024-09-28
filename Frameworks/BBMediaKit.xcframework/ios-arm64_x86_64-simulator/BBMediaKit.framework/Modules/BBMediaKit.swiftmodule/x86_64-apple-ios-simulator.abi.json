@@ -7884,28 +7884,28 @@
     {
       "filePath": "\/Users\/aubarton\/Developer\/TGI\/Repo\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 2216,
+      "offset": 2426,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/aubarton\/Developer\/TGI\/Repo\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 2689,
+      "offset": 2899,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/aubarton\/Developer\/TGI\/Repo\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 3500,
+      "offset": 3710,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/aubarton\/Developer\/TGI\/Repo\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 3566,
+      "offset": 3776,
       "length": 32,
       "value": "\"bbmediakit.metadataOutputQueue\""
     },
