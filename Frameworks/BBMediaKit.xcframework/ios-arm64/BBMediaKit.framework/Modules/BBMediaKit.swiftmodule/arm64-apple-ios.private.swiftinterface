@@ -110,6 +110,16 @@ public enum BBFpsOption : Swift.Double {
 public struct BBSessionConfiguration {
   public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", isMediaReady: Swift.Bool = false, offsetFrames: Swift.Int = 0)
 }
+public enum BBPScalingMode : Swift.Int {
+  case fit
+  case zoom
+  case stretch
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 extension BBMediaKit.BBTimecode {
   public struct Properties {
     public var frameRate: BBMediaKit.BBTimecodeFrameRate
@@ -149,6 +159,10 @@ public protocol BBMediaSessionDelegate : AnyObject {
     set
   }
   public var isDebug: Swift.Bool {
+    get
+    set
+  }
+  public var scalingMode: BBMediaKit.BBPScalingMode {
     get
     set
   }
@@ -243,6 +257,9 @@ extension BBMediaKit.BBTimecode.Format : Swift.Hashable {}
 extension BBMediaKit.BBFpsOption : Swift.Equatable {}
 extension BBMediaKit.BBFpsOption : Swift.Hashable {}
 extension BBMediaKit.BBFpsOption : Swift.RawRepresentable {}
+extension BBMediaKit.BBPScalingMode : Swift.Equatable {}
+extension BBMediaKit.BBPScalingMode : Swift.Hashable {}
+extension BBMediaKit.BBPScalingMode : Swift.RawRepresentable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.Equatable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.Hashable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.RawRepresentable {}
