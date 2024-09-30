@@ -166,7 +166,7 @@ public protocol BBMediaSessionDelegate : AnyObject {
     get
     set
   }
-  public var isAugmentationEnabled: Swift.Bool {
+  public var isAugmentationLayerEnabled: Swift.Bool {
     get
     set
   }
