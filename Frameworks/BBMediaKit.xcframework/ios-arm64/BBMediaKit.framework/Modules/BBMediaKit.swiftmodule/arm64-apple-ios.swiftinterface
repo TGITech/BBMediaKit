@@ -166,6 +166,10 @@ public protocol BBMediaSessionDelegate : AnyObject {
     get
     set
   }
+  public var isAugmentationEnabled: Swift.Bool {
+    get
+    set
+  }
   public init?(playerLayer: QuartzCore.CALayer? = nil, player: AVFoundation.AVPlayer? = nil, configuration: BBMediaKit.BBSessionConfiguration)
   @objc deinit
   @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
