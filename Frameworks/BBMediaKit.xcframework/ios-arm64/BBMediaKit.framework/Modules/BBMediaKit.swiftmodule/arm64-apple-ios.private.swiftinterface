@@ -75,6 +75,9 @@ extension Foundation.FileManager {
   public func archivesDirectoryURL() -> Foundation.URL
   public func adsDirectoryURL() -> Foundation.URL
 }
+public struct FrameworkVersion {
+  public static let gitHash: Swift.String
+}
 extension BBMediaKit.BBTimecode {
   public struct Components {
   }
