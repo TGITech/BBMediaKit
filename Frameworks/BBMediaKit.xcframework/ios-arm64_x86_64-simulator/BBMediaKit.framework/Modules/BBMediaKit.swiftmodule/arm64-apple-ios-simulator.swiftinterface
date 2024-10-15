@@ -1,15 +1,18 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BBMediaKit
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BBMediaKit
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
 @_exported import BBMediaKit
 import CoreGraphics
+import CoreMedia
 import CoreVideo
 import Foundation
 import Metal
 import MetalKit
 import QuartzCore
+import SocketIO
 import Swift
 import UIKit
 import VideoToolbox
@@ -74,6 +77,9 @@ extension Foundation.FileManager {
   public func archivesDirectoryURL() -> Foundation.URL
   public func adsDirectoryURL() -> Foundation.URL
 }
+public struct FrameworkVersion {
+  public static let gitHash: Swift.String
+}
 extension BBMediaKit.BBTimecode {
   public struct Components {
   }
@@ -114,6 +120,12 @@ public enum BBPScalingMode : Swift.Int {
   case fit
   case zoom
   case stretch
+  public var stringValue: Swift.String {
+    get
+  }
+  public var videoGravity: AVFoundation.AVLayerVideoGravity {
+    get
+  }
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -125,7 +137,22 @@ extension BBMediaKit.BBTimecode {
     public var frameRate: BBMediaKit.BBTimecodeFrameRate
   }
 }
+public typealias AdUpdatedBlock = (_ image: UIKit.UIImage) -> Swift.Void
+@objc @_inheritsConvenienceInitializers final public class BBAdsManager : ObjectiveC.NSObject {
+  public static let shared: BBMediaKit.BBAdsManager
+  final public var adsLoaded: Swift.Bool
+  final public var imageToPresent: UIKit.UIImage? {
+    get
+    set
+  }
+  final public var adDidUpdate: BBMediaKit.AdUpdatedBlock?
+  @objc override dynamic public init()
+  final public func connectToAdsListener()
+  final public func disconnectAdsListener()
+  @objc deinit
+}
 @objc @_hasMissingDesignatedInitializers final public class BBMetadataWorker : ObjectiveC.NSObject {
+  final public var didRestartLoading: (() -> Swift.Void)?
   @objc deinit
   final public func readMetadata(forKey key: Swift.String) -> BBMediaKit.BBMetadata?
   final public func deleteMetadata(forKey key: Swift.String)
@@ -176,6 +203,10 @@ public protocol BBMediaSessionDelegate : AnyObject {
   public func toggle(isEnabled: Swift.Bool)
   public func begin()
   public func end()
+}
+extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegate {
+  @objc dynamic public func outputMediaDataWillChange(_ sender: AVFoundation.AVPlayerItemOutput)
+  @objc dynamic public func outputSequenceWasFlushed(_ output: AVFoundation.AVPlayerItemOutput)
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
   @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
