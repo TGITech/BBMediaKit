@@ -5,9 +5,13 @@
 import AVFoundation
 import AVKit
 @_exported import BBMediaKit
+import CoreFoundation
 import CoreGraphics
 import CoreMedia
+import CoreText
 import CoreVideo
+import DatadogCore
+import DatadogLogs
 import Foundation
 import Metal
 import MetalKit
@@ -47,7 +51,7 @@ public typealias BackgroundDownloadCompletionHandler = () -> Swift.Void
 public struct DownloadManagerConfig {
   public var maximumRetries: Swift.Int
 }
-@objc @_inheritsConvenienceInitializers final public class DownloadManager : ObjectiveC.NSObject, Foundation.URLSessionDelegate, Foundation.URLSessionDownloadDelegate {
+@objc @_inheritsConvenienceInitializers final public class DownloadManager : ObjectiveC.NSObject, Foundation.URLSessionDelegate, Foundation.URLSessionDownloadDelegate, BBMediaKit.Loggable {
   public static let shared: BBMediaKit.DownloadManager
   final public var configuration: BBMediaKit.DownloadManagerConfig
   final public var backgroundDownloadCompletionHandler: BBMediaKit.BackgroundDownloadCompletionHandler?
@@ -71,6 +75,14 @@ extension BBMediaKit.DownloadManager {
   final public func deleteDownloadItem(_ downloadItem: BBMediaKit.DownloadItem)
   final public func deleteDownload(url: Foundation.URL)
   final public func deleteAllDowndloads()
+}
+public protocol Loggable {
+  var logger: any DatadogLogs.LoggerProtocol { get }
+}
+extension BBMediaKit.Loggable where Self : AnyObject {
+  public var logger: any DatadogLogs.LoggerProtocol {
+    get
+  }
 }
 extension Foundation.FileManager {
   public func documentsDirectoryURL() -> Foundation.URL
@@ -104,6 +116,26 @@ public struct BBMetadataItem {
   public let timecodeString: Swift.String
   public init?(avMetadataItem: AVFoundation.AVMetadataItem, frameRate: Swift.Double)
 }
+public struct BBGlyphInfo {
+  public let character: Swift.Character
+  public let glyph: CoreGraphics.CGGlyph
+  public let advance: CoreFoundation.CGSize
+  public var textureRect: CoreFoundation.CGRect
+}
+public class BBFontAtlasGenerator {
+  public var atlasInfo: [Swift.Character : BBMediaKit.BBGlyphInfo] {
+    get
+  }
+  public var atlasImage: UIKit.UIImage? {
+    get
+  }
+  public var atlasTexture: (any Metal.MTLTexture)? {
+    get
+  }
+  public init(font: UIKit.UIFont, text: Swift.String)
+  public func build()
+  @objc deinit
+}
 public enum BBFpsOption : Swift.Double {
   case fps59
   case fps29
@@ -113,8 +145,9 @@ public enum BBFpsOption : Swift.Double {
     get
   }
 }
-public struct BBSessionConfiguration {
-  public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", isMediaReady: Swift.Bool = false, offsetFrames: Swift.Int = 0)
+public class BBSessionConfiguration {
+  public init(mediaID: Swift.String, streamURL: Swift.String, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetFrames: Swift.Int = 0)
+  @objc deinit
 }
 public enum BBPScalingMode : Swift.Int {
   case fit
@@ -137,21 +170,7 @@ extension BBMediaKit.BBTimecode {
     public var frameRate: BBMediaKit.BBTimecodeFrameRate
   }
 }
-public typealias AdUpdatedBlock = (_ image: UIKit.UIImage) -> Swift.Void
-@objc @_inheritsConvenienceInitializers final public class BBAdsManager : ObjectiveC.NSObject {
-  public static let shared: BBMediaKit.BBAdsManager
-  final public var adsLoaded: Swift.Bool
-  final public var imageToPresent: UIKit.UIImage? {
-    get
-    set
-  }
-  final public var adDidUpdate: BBMediaKit.AdUpdatedBlock?
-  @objc override dynamic public init()
-  final public func connectToAdsListener()
-  final public func disconnectAdsListener()
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers final public class BBMetadataWorker : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers final public class BBMetadataWorker : ObjectiveC.NSObject, BBMediaKit.Loggable {
   final public var didRestartLoading: (() -> Swift.Void)?
   @objc deinit
   final public func readMetadata(forKey key: Swift.String) -> BBMediaKit.BBMetadata?
@@ -175,7 +194,7 @@ public protocol BBMediaSessionDelegate : AnyObject {
   func mediaSession(_ sender: BBMediaKit.BBMediaSession, pixelBuffer: CoreVideo.CVPixelBuffer, itemTime: CoreMedia.CMTime, displayTime: CoreMedia.CMTime, augmentationMetadata: BBMediaKit.BBMetadata)
   func mediaSession(_ sender: BBMediaKit.BBMediaSession, metadataItem: BBMediaKit.BBMetadataItem)
 }
-@objc public class BBMediaSession : ObjectiveC.NSObject {
+@objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
   weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)?
   weak public var contentView: UIKit.UIView? {
     get
@@ -210,6 +229,20 @@ extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegat
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
   @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
+}
+public typealias AdUpdatedBlock = (_ image: UIKit.UIImage) -> Swift.Void
+final public class BBAdsManager : BBMediaKit.Loggable {
+  public static let shared: BBMediaKit.BBAdsManager
+  final public var adsLoaded: Swift.Bool
+  final public var imageToPresent: UIKit.UIImage? {
+    get
+    set
+  }
+  final public var adDidUpdate: BBMediaKit.AdUpdatedBlock?
+  public init()
+  final public func connectToAdsListener()
+  final public func disconnectAdsListener()
+  @objc deinit
 }
 public enum BBTimecodeFrameRate : Swift.String, Swift.CustomStringConvertible {
   case fps29_97
