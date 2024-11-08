@@ -1140,7 +1140,10 @@
         "name": "DatadogCore",
         "printedName": "DatadogCore",
         "declKind": "Import",
-        "moduleName": "BBMediaKit"
+        "moduleName": "BBMediaKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
@@ -10212,42 +10215,42 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Utils\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 631,
+      "offset": 652,
       "length": 37,
       "value": "\"pub4844895ac30067ac2c4aaa025dbc39d7\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Utils\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 695,
+      "offset": 716,
       "length": 9,
       "value": "\"staging\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Utils\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 955,
+      "offset": 976,
       "length": 16,
       "value": "\"BBMediaKitDemo\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Utils\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 995,
+      "offset": 1016,
       "length": 20,
       "value": "\"BBMediaKitDemo iOS\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Utils\/Logger.swift",
       "kind": "BooleanLiteral",
-      "offset": 1053,
+      "offset": 1074,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
-      "offset": 1093,
+      "offset": 1114,
       "length": 3,
       "value": "100"
     },
@@ -10347,7 +10350,7 @@
       "kind": "StringLiteral",
       "offset": 174,
       "length": 9,
-      "value": "\"80dd945\""
+      "value": "\"604562e\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/AugmentationService\/BBAugmentationService.swift",
