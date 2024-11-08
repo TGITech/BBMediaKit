@@ -15,7 +15,6 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/orchetect/TimecodeKit.git", from: "2.0.0"),
         .package(url: "https://github.com/weichsel/ZIPFoundation.git", from: "0.9.19"),
         .package(url: "https://github.com/socketio/socket.io-client-swift", from: "16.1.1"),
         .package(url: "https://github.com/Datadog/dd-sdk-ios.git", from: "2.18.0")
@@ -29,7 +28,6 @@ let package = Package(
             name: "BBMediaKitWrapper",
             dependencies: [
                 .target(name: "BBMediaKit"),
-                .product(name: "TimecodeKit", package: "TimecodeKit"),
                 .product(name: "ZIPFoundation", package: "ZIPFoundation"),
                 .product(name: "SocketIO", package: "socket.io-client-swift"),
                 .product(name: "DatadogCore", package: "dd-sdk-ios"),

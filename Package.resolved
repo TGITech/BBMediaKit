@@ -46,15 +46,6 @@
       }
     },
     {
-      "identity" : "timecodekit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/orchetect/TimecodeKit.git",
-      "state" : {
-        "revision" : "01006cd3d0555b4a38deea95d8f3c5c07c1e099b",
-        "version" : "2.2.0"
-      }
-    },
-    {
       "identity" : "zipfoundation",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/weichsel/ZIPFoundation.git",
