@@ -10376,7 +10376,7 @@
       "kind": "StringLiteral",
       "offset": 174,
       "length": 9,
-      "value": "\"db8a083\""
+      "value": "\"82eed07\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/AugmentationService\/BBAugmentationService.swift",
@@ -12481,126 +12481,133 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 435,
+      "offset": 438,
       "length": 38,
       "value": "\"https:\/\/db8igqxlbvayn.cloudfront.net\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 511,
+      "offset": 516,
+      "length": 43,
+      "value": "\"https:\/\/db8igqxlbvayn.cloudfront.net\/prod\""
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 597,
       "length": 16,
       "value": "\"bbtestexternal\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 659,
+      "offset": 745,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 686,
+      "offset": 772,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 715,
+      "offset": 801,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1068,
+      "offset": 1249,
       "length": 6,
       "value": "\"map\/\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1132,
+      "offset": 1313,
       "length": 9,
       "value": "\"offset\/\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1194,
+      "offset": 1375,
       "length": 6,
       "value": "\"ads\/\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1382,
+      "offset": 1563,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1406,
+      "offset": 1587,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1434,
+      "offset": 1615,
       "length": 8,
       "value": "\"NBATVD\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2497,
+      "offset": 2678,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2578,
+      "offset": 2759,
       "length": 9,
       "value": "\"mediaID\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2614,
+      "offset": 2795,
       "length": 6,
       "value": "\"mkID\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2630,
+      "offset": 2811,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2650,
+      "offset": 2831,
       "length": 11,
       "value": "\"streamURL\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2676,
+      "offset": 2857,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2696,
+      "offset": 2877,
       "length": 5,
       "value": "\"fps\""
     },
