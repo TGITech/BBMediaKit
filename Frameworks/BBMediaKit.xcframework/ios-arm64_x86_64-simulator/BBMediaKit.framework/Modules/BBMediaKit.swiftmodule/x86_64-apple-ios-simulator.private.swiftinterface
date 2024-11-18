@@ -261,10 +261,10 @@ public enum BBTimecodeFrameRate : Swift.String, Swift.CustomStringConvertible {
   }
 }
 public class BBMetadata : Swift.Codable {
-  final public let canvasSize: BBMediaKit.CanvasSize
+  final public let canvasSize: BBMediaKit.CanvasSize?
   final public let placeholdersMap: [Swift.String : BBMediaKit.Placeholder]?
-  final public let processingHeight: Swift.Int
-  final public let processingWidth: Swift.Int
+  final public let processingHeight: Swift.Int?
+  final public let processingWidth: Swift.Int?
   final public let sourceFormat: BBMediaKit.SourceFormat
   final public let timecode: Swift.String
   public var alphaBuffer: CoreVideo.CVImageBuffer?
