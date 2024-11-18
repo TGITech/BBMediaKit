@@ -145,7 +145,7 @@ public enum BBFpsOption : Swift.Double {
   }
 }
 public class BBSessionConfiguration {
-  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetFrames: Swift.Int = 0)
+  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetFrames: Swift.Int = 0, isMP4: Swift.Bool = false)
   @objc deinit
 }
 public enum BBPScalingMode : Swift.Int {
@@ -267,6 +267,7 @@ public class BBMetadata : Swift.Codable {
   final public let processingWidth: Swift.Int
   final public let sourceFormat: BBMediaKit.SourceFormat
   final public let timecode: Swift.String
+  public var alphaBuffer: CoreVideo.CVImageBuffer?
   public var placeholders: [BBMediaKit.Placeholder]? {
     get
   }
