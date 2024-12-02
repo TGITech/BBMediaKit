@@ -1,15 +1,15 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BBMediaKit
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BBMediaKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AVKit
 @_exported import BBMediaKit
-import CoreFoundation
 import CoreGraphics
+import CoreImage
 import CoreMedia
-import CoreText
 import CoreVideo
+import DatadogCore
 import DatadogLogs
 import Foundation
 import Metal
@@ -75,14 +75,6 @@ extension BBMediaKit.DownloadManager {
   final public func deleteDownload(url: Foundation.URL)
   final public func deleteAllDowndloads()
 }
-public protocol Loggable {
-  var logger: any DatadogLogs.LoggerProtocol { get }
-}
-extension BBMediaKit.Loggable where Self : AnyObject {
-  public var logger: any DatadogLogs.LoggerProtocol {
-    get
-  }
-}
 extension Foundation.FileManager {
   public func documentsDirectoryURL() -> Foundation.URL
   public func archivesDirectoryURL() -> Foundation.URL
@@ -114,26 +106,6 @@ public struct BBMetadataItem {
   public let timecode: BBMediaKit.BBTimecode
   public let timecodeString: Swift.String
   public init?(avMetadataItem: AVFoundation.AVMetadataItem, frameRate: Swift.Double)
-}
-public struct BBGlyphInfo {
-  public let character: Swift.Character
-  public let glyph: CoreGraphics.CGGlyph
-  public let advance: CoreFoundation.CGSize
-  public var textureRect: CoreFoundation.CGRect
-}
-public class BBFontAtlasGenerator {
-  public var atlasInfo: [Swift.Character : BBMediaKit.BBGlyphInfo] {
-    get
-  }
-  public var atlasImage: UIKit.UIImage? {
-    get
-  }
-  public var atlasTexture: (any Metal.MTLTexture)? {
-    get
-  }
-  public init(font: UIKit.UIFont, text: Swift.String)
-  public func build()
-  @objc deinit
 }
 public enum BBFpsOption : Swift.Double {
   case fps59
@@ -169,6 +141,20 @@ extension BBMediaKit.BBTimecode {
     public var frameRate: BBMediaKit.BBTimecodeFrameRate
   }
 }
+public typealias AdUpdatedBlock = (_ image: UIKit.UIImage) -> Swift.Void
+final public class BBAdsManager : BBMediaKit.Loggable {
+  public static let shared: BBMediaKit.BBAdsManager
+  final public var adsLoaded: Swift.Bool
+  final public var imageToPresent: UIKit.UIImage? {
+    get
+    set
+  }
+  final public var adDidUpdate: BBMediaKit.AdUpdatedBlock?
+  public init()
+  final public func connectToAdsListener()
+  final public func disconnectAdsListener()
+  @objc deinit
+}
 @objc @_hasMissingDesignatedInitializers final public class BBMetadataWorker : ObjectiveC.NSObject, BBMediaKit.Loggable {
   final public var didRestartLoading: (() -> Swift.Void)?
   @objc deinit
@@ -187,11 +173,7 @@ extension BBMediaKit.BBTimecode {
   public init(_ frameCount: BBMediaKit.BBTimecode.FrameCount, frameRate: BBMediaKit.BBTimecodeFrameRate)
 }
 public protocol BBMediaSessionDelegate : AnyObject {
-  func mediaSessionDidBegin(_ sender: BBMediaKit.BBMediaSession)
-  func mediaSessionDidEnd(_ sender: BBMediaKit.BBMediaSession)
-  func mediaSession(_ sender: BBMediaKit.BBMediaSession, pixelBuffer: CoreVideo.CVPixelBuffer, itemTime: CoreMedia.CMTime, displayTime: CoreMedia.CMTime)
-  func mediaSession(_ sender: BBMediaKit.BBMediaSession, pixelBuffer: CoreVideo.CVPixelBuffer, itemTime: CoreMedia.CMTime, displayTime: CoreMedia.CMTime, augmentationMetadata: BBMediaKit.BBMetadata)
-  func mediaSession(_ sender: BBMediaKit.BBMediaSession, metadataItem: BBMediaKit.BBMetadataItem)
+  func currentStreamFPS(_ sender: BBMediaKit.BBMediaSession) -> Swift.Float
 }
 @objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
   weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)?
@@ -229,20 +211,6 @@ extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegat
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
   @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
 }
-public typealias AdUpdatedBlock = (_ image: UIKit.UIImage) -> Swift.Void
-final public class BBAdsManager : BBMediaKit.Loggable {
-  public static let shared: BBMediaKit.BBAdsManager
-  final public var adsLoaded: Swift.Bool
-  final public var imageToPresent: UIKit.UIImage? {
-    get
-    set
-  }
-  final public var adDidUpdate: BBMediaKit.AdUpdatedBlock?
-  public init()
-  final public func connectToAdsListener()
-  final public func disconnectAdsListener()
-  @objc deinit
-}
 public enum BBTimecodeFrameRate : Swift.String, Swift.CustomStringConvertible {
   case fps29_97
   case fps29_97d
@@ -268,10 +236,11 @@ public class BBMetadata : Swift.Codable {
   final public let sourceFormat: BBMediaKit.SourceFormat
   final public let timecode: Swift.String
   public var alphaBuffer: CoreVideo.CVImageBuffer?
+  public var isLive: Swift.Bool
   public var placeholders: [BBMediaKit.Placeholder]? {
     get
   }
-  public init(canvasSize: BBMediaKit.CanvasSize = CanvasSize(height: 0, width: 0), placeholders: [Swift.String : BBMediaKit.Placeholder], processingHeight: Swift.Int = 100, processingWidth: Swift.Int = 100, sourceFormat: BBMediaKit.SourceFormat = SourceFormat(fps: 29.98, height: 100, interlaced: false, width: 200), timecode: Swift.String)
+  public init(canvasSize: BBMediaKit.CanvasSize = CanvasSize(height: 0, width: 0), placeholders: [Swift.String : BBMediaKit.Placeholder], processingHeight: Swift.Int = 100, processingWidth: Swift.Int = 100, sourceFormat: BBMediaKit.SourceFormat = SourceFormat(fps: 29.98, height: 100, interlaced: false, width: 200), timecode: Swift.String, isLive: Swift.Bool = false)
   required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -313,6 +282,14 @@ public struct SourceFormat : Swift.Codable {
   public init(fps: Swift.Double, height: Swift.Int, interlaced: Swift.Bool, width: Swift.Int)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public protocol Loggable {
+  var logger: any DatadogLogs.LoggerProtocol { get }
+}
+extension BBMediaKit.Loggable where Self : AnyObject {
+  public var logger: any DatadogLogs.LoggerProtocol {
+    get
+  }
 }
 extension BBMediaKit.BBTimecode {
   public struct FrameCount {

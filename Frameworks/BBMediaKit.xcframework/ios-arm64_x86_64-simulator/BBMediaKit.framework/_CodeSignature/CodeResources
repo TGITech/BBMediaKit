@@ -10,47 +10,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0a/myM3tMynt1amd9ZlkIQx0LtQ=
+		Gue8v8Q0iAnLQO5YtmBliD9oISQ=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		iJJuIbSHXutUkwkdr+kiQEjMOrA=
+		1tykgnluTo1f5/Zk+XK8IB2dLN4=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		gmHRslEo1WNGAuz83k3Eu7iM1Vo=
+		fQPb4c1eJJkCz0D3NqMLHbxIwik=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		h9PippV5p/qdWWT1vXMdF8do94M=
+		jaJZREo666y5JhSTN9w6VdKs05s=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		gmHRslEo1WNGAuz83k3Eu7iM1Vo=
+		fQPb4c1eJJkCz0D3NqMLHbxIwik=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		z/w/+2NL2G5eclkpjOIMlJYUIjQ=
+		R5HmkTvh8kOP8XRVBbZQdV863MQ=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		iJJuIbSHXutUkwkdr+kiQEjMOrA=
+		1tykgnluTo1f5/Zk+XK8IB2dLN4=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		8Wgzh+uYn3dxGUJLhCI0anFKv/8=
+		jQuyZDGaEghFZHeqDye3+Eb5XIs=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		eRxDb2PoZGfcqYX20cDOOqpqK+w=
+		dFxM9gYuyB2ACXU2lkcwXBDCKuc=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		8Wgzh+uYn3dxGUJLhCI0anFKv/8=
+		jQuyZDGaEghFZHeqDye3+Eb5XIs=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		hSD0G+ew6403rWECdlU9y3yw8WE=
+		cDAM07QGsXMdqaeXIaaLjAaMi+I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		Q7Ata5/gGr89h33f10sWUjMuibU=
+		uuCyxv2WEZj/C54z1frNqBbjKH4=
 		</data>
 		<key>demo.alpha</key>
 		<data>
@@ -86,70 +86,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nmftpm1VCQfxMtoGEOuNY7s8sY8KboE/ZZka2m5Pqms=
+			hbO1u4/2wr291WTjKOJhFIT+duPPWQrF6CzrQDqNPmM=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AlimfvamNMpPmO8CUmf/aTIC7VcqyWF5l3e3tZOIz+I=
+			udUuIZP4ojcZExAFfHjSgmZ2XkBGS9podOyM9Jm5BlU=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OawVjKhGVNPx5E6evInroowkoKbXKNyoyS1vlLNM5i0=
+			KeERNrlvEOh/8LkpGZIUnpdEf/dpduWbdEckmxriv0s=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AlimfvamNMpPmO8CUmf/aTIC7VcqyWF5l3e3tZOIz+I=
+			udUuIZP4ojcZExAFfHjSgmZ2XkBGS9podOyM9Jm5BlU=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oa6otg3t0IJjLdEr2pN0oiackkos27VQl9nXD2O9sN0=
+			JkPK3nw5V0TW/KWSCG2o1Pcqh5NlqNod54BSzh4SM8s=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nmftpm1VCQfxMtoGEOuNY7s8sY8KboE/ZZka2m5Pqms=
+			hbO1u4/2wr291WTjKOJhFIT+duPPWQrF6CzrQDqNPmM=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6dIZJ4tl9NYPiZ6MC6DPjVaO5du1YF3UQIbZx24S+zs=
+			x7ImayKuDL8idvLsHKcD0cBJr+6uSbvdQ7c6Ob0ScHI=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Ld1WrArCZC3uHEMy9Uai+g1rvnO7aXjHoNFl4/1A/Y=
+			uZg2JWbheYiRigk/vc6B84bC0QA2UJRUyY0m80MDbCk=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6dIZJ4tl9NYPiZ6MC6DPjVaO5du1YF3UQIbZx24S+zs=
+			x7ImayKuDL8idvLsHKcD0cBJr+6uSbvdQ7c6Ob0ScHI=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kQy8WayfYuzmRPR7/Asd/TFBDEKlbagDtZ9Z19pscck=
+			EpZNtsgPQBzWmSMSrhehdwgCWsSTLAjhIIP3MU7k6Rw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mPGzYRNvtt459JLHLIzWmjxJRP8WWBkbdXjUUJGUYYc=
+			/4Wi5+rE5QbRph3Gvtm3dWAa/u0QvcxYFUwCBRkAEM0=
 			</data>
 		</dict>
 		<key>demo.alpha</key>
