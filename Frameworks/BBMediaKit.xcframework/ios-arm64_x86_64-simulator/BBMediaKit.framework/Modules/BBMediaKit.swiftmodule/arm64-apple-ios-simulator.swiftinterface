@@ -9,7 +9,6 @@ import CoreGraphics
 import CoreImage
 import CoreMedia
 import CoreVideo
-import DatadogCore
 import DatadogLogs
 import Foundation
 import Metal
