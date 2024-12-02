@@ -9153,7 +9153,10 @@
         "name": "DatadogCore",
         "printedName": "DatadogCore",
         "declKind": "Import",
-        "moduleName": "BBMediaKit"
+        "moduleName": "BBMediaKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
