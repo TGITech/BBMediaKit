@@ -140,15 +140,16 @@ extension BBMediaKit.BBTimecode {
     public var frameRate: BBMediaKit.BBTimecodeFrameRate
   }
 }
-public typealias AdUpdatedBlock = (_ image: UIKit.UIImage) -> Swift.Void
+public typealias AdUpdatedBlock = (_ advertising: BBMediaKit.BBImageAd) -> Swift.Void
 final public class BBAdsManager : BBMediaKit.Loggable {
   public static let shared: BBMediaKit.BBAdsManager
   final public var adsLoaded: Swift.Bool
-  final public var imageToPresent: UIKit.UIImage? {
+  final public var currentAdItem: BBMediaKit.BBImageAd? {
     get
     set
   }
   final public var adDidUpdate: BBMediaKit.AdUpdatedBlock?
+  final public var ads: [Swift.String : BBMediaKit.BBImageAd]
   public init()
   final public func connectToAdsListener()
   final public func disconnectAdsListener()
@@ -171,11 +172,15 @@ extension BBMediaKit.BBTimecode {
   public init(_ components: BBMediaKit.BBTimecode.Components, frameRate: BBMediaKit.BBTimecodeFrameRate)
   public init(_ frameCount: BBMediaKit.BBTimecode.FrameCount, frameRate: BBMediaKit.BBTimecodeFrameRate)
 }
-public protocol BBMediaSessionDelegate : AnyObject {
-  func currentStreamFPS(_ sender: BBMediaKit.BBMediaSession) -> Swift.Float
+public struct BBImageAd {
+  public let image: UIKit.UIImage
+  public let redirectURL: Foundation.URL?
+}
+public protocol BBMediaSessionDataSource : AnyObject {
+  func mediaSessionFPS(_ sender: BBMediaKit.BBMediaSession) -> Swift.Float
 }
 @objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
-  weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)?
+  weak public var dataSource: (any BBMediaKit.BBMediaSessionDataSource)?
   weak public var contentView: UIKit.UIView? {
     get
     set
@@ -193,6 +198,26 @@ public protocol BBMediaSessionDelegate : AnyObject {
     set
   }
   public var isAugmentationLayerEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var allowRendererMSAA: Swift.Bool {
+    get
+    set
+  }
+  public var allowRendererMipMap: Swift.Bool {
+    get
+    set
+  }
+  public var allowRendererAnisotropic: Swift.Bool {
+    get
+    set
+  }
+  public var allowScreenFPS: Swift.Bool {
+    get
+    set
+  }
+  public var allowStreamFPS: Swift.Bool {
     get
     set
   }
