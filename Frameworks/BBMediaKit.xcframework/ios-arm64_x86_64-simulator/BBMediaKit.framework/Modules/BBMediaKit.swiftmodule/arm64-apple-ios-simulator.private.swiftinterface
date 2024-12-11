@@ -19,6 +19,7 @@ import Swift
 import UIKit
 import VideoToolbox
 import Vision
+import WebKit
 import ZIPFoundation
 import _Concurrency
 import _StringProcessing
