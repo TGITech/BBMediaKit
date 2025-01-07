@@ -8,6 +8,7 @@ import AVKit
 import CoreGraphics
 import CoreImage
 import CoreMedia
+import CoreText
 import CoreVideo
 import DatadogLogs
 import Foundation
@@ -59,6 +60,7 @@ public struct DownloadManagerConfig {
   final public func cancelDownload(withURL url: Foundation.URL)
   @objc final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
   @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
   @objc final public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
   @objc override dynamic public init()
   @objc deinit
@@ -117,7 +119,27 @@ public enum BBFpsOption : Swift.Double {
   }
 }
 public class BBSessionConfiguration {
-  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetFrames: Swift.Int = 0, isMP4: Swift.Bool = false)
+  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = false)
+  @objc deinit
+}
+public struct BBGlyphInfo {
+  public let character: Swift.Character
+  public let glyph: CoreGraphics.CGGlyph
+  public let advance: CoreFoundation.CGSize
+  public var textureRect: CoreFoundation.CGRect
+}
+public class BBFontAtlasGenerator {
+  public var atlasInfo: [Swift.Character : BBMediaKit.BBGlyphInfo] {
+    get
+  }
+  public var atlasImage: UIKit.UIImage? {
+    get
+  }
+  public var atlasTexture: (any Metal.MTLTexture)? {
+    get
+  }
+  public init(font: UIKit.UIFont, text: Swift.String)
+  public func build()
   @objc deinit
 }
 public enum BBPScalingMode : Swift.Int {
@@ -202,6 +224,18 @@ public protocol BBMediaSessionDataSource : AnyObject {
     get
     set
   }
+  public var allowRenderDeviceFPS: Swift.Bool {
+    get
+    set
+  }
+  public var allowRenderStreamFPS: Swift.Bool {
+    get
+    set
+  }
+  public var allowRenderTimecode: Swift.Bool {
+    get
+    set
+  }
   public var allowRendererMSAA: Swift.Bool {
     get
     set
@@ -211,14 +245,6 @@ public protocol BBMediaSessionDataSource : AnyObject {
     set
   }
   public var allowRendererAnisotropic: Swift.Bool {
-    get
-    set
-  }
-  public var allowScreenFPS: Swift.Bool {
-    get
-    set
-  }
-  public var allowStreamFPS: Swift.Bool {
     get
     set
   }
@@ -235,6 +261,19 @@ extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegat
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
   @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
+}
+public struct BBGameInfo : Swift.Codable {
+  public let bucketName: Swift.String
+  public let offsets: [BBMediaKit.BBOffset]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BBOffset : Swift.Codable {
+  public let frame: Swift.Int64
+  public let offset: Swift.Int64
+  public let timecode: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum BBTimecodeFrameRate : Swift.String, Swift.CustomStringConvertible {
   case fps29_97
