@@ -119,7 +119,7 @@ public enum BBFpsOption : Swift.Double {
   }
 }
 public class BBSessionConfiguration {
-  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = false)
+  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true)
   @objc deinit
 }
 public struct BBGlyphInfo {
