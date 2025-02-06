@@ -867,6 +867,60 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Function",
+            "name": "urlSession",
+            "printedName": "urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSession",
+                "printedName": "Foundation.URLSession",
+                "usr": "c:objc(cs)NSURLSession"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSessionDownloadTask",
+                "printedName": "Foundation.URLSessionDownloadTask",
+                "usr": "c:objc(cs)NSURLSessionDownloadTask"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@BBMediaKit@objc(cs)DownloadManager(im)URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:",
+            "mangledName": "$s10BBMediaKit15DownloadManagerC10urlSession_12downloadTask12didWriteData17totalBytesWritten0lm10ExpectedToJ0ySo12NSURLSessionC_So0qcH0Cs5Int64VA2NtF",
+            "moduleName": "BBMediaKit",
+            "objc_name": "URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "downloads",
             "printedName": "downloads",
@@ -11358,28 +11412,28 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1310,
+      "offset": 1495,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1354,
+      "offset": 1539,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1416,
+      "offset": 1601,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1718,
+      "offset": 1903,
       "length": 1,
       "value": "1"
     },
@@ -11402,7 +11456,7 @@
       "kind": "StringLiteral",
       "offset": 174,
       "length": 9,
-      "value": "\"ecfeee9\""
+      "value": "\"20b661c\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBCanvasView.swift",
@@ -11421,7 +11475,7 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBCanvasView.swift",
       "kind": "Array",
-      "offset": 5331,
+      "offset": 5330,
       "length": 2,
       "value": "[]"
     },
@@ -12043,162 +12097,246 @@
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "BooleanLiteral",
-      "offset": 797,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "BooleanLiteral",
-      "offset": 969,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1078,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1415,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1640,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1762,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2525,
-      "length": 2,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2529,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2570,
-      "length": 2,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2574,
-      "length": 2,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2618,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2621,
-      "length": 2,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2667,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2670,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2766,
+      "offset": 1001,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2769,
+      "offset": 1074,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2809,
+      "offset": 1467,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1540,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1933,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2006,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2399,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2472,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2865,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2938,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3331,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3404,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6010,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6182,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6291,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6628,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6853,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6975,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7738,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7742,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7783,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7787,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7831,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7834,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7880,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7883,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7979,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2812,
+      "offset": 7982,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8022,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8025,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2849,
+      "offset": 8062,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2852,
+      "offset": 8065,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2890,
+      "offset": 8103,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2893,
+      "offset": 8106,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Renderer\/BBAugmentationRenderer.swift",
       "kind": "Array",
-      "offset": 2961,
+      "offset": 8174,
       "length": 40,
       "value": "[0, 1, 2, 0, 2, 3]"
     },
@@ -12401,147 +12539,140 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 234,
+      "offset": 367,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 337,
+      "offset": 470,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 391,
+      "offset": 524,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 504,
+      "offset": 637,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 622,
+      "offset": 755,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 721,
+      "offset": 854,
       "length": 5,
       "value": "15000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 906,
+      "offset": 1039,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 822,
+      "offset": 955,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 980,
+      "offset": 1113,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 1075,
+      "offset": 1208,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 1129,
+      "offset": 1262,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 6177,
+      "offset": 6498,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 1306,
+      "offset": 1374,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 2109,
+      "offset": 2375,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 2648,
+      "offset": 2914,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 2982,
+      "offset": 3248,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 3326,
+      "offset": 3592,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 3567,
+      "offset": 3833,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 3807,
+      "offset": 4073,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 4052,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4317,
+      "offset": 4318,
       "length": 5,
       "value": "false"
     },
@@ -12554,92 +12685,120 @@
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4849,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 5403,
+      "offset": 5873,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 5469,
+      "offset": 5939,
       "length": 32,
       "value": "\"bbmediakit.metadataOutputQueue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 5686,
+      "offset": 6156,
       "length": 17,
       "value": "\"didChangeOffset\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 5718,
+      "offset": 6188,
       "length": 8,
       "value": "\"offset\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 5641,
+      "offset": 6111,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 6726,
+      "offset": 7337,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 6775,
+      "offset": 7403,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 7426,
+      "offset": 8046,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 7463,
+      "offset": 8083,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 7500,
+      "offset": 8120,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8312,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8354,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8392,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 15679,
+      "offset": 16732,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 15739,
+      "offset": 16792,
       "length": 27,
       "value": "\"bbmediakit.mediaDataQueue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 34476,
+      "offset": 44643,
       "length": 3,
       "value": "170"
     },

@@ -65,6 +65,9 @@ public struct DownloadManagerConfig {
   @objc override dynamic public init()
   @objc deinit
 }
+extension BBMediaKit.DownloadManager : Foundation.URLSessionTaskDelegate {
+  @objc final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+}
 extension BBMediaKit.DownloadManager {
   final public var downloads: [Foundation.URL] {
     get
