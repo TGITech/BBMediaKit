@@ -15,9 +15,9 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/weichsel/ZIPFoundation.git", revision: "0.9.19"),
-        .package(url: "https://github.com/socketio/socket.io-client-swift", revision: "16.1.1"),
-        .package(url: "https://github.com/Datadog/dd-sdk-ios.git", revision: "2.18.0")
+        .package(url: "https://github.com/weichsel/ZIPFoundation.git", from: "0.9.19"),
+        .package(url: "https://github.com/socketio/socket.io-client-swift", from: "16.1.1"),
+        .package(url: "https://github.com/Datadog/dd-sdk-ios.git", from: "2.18.0")
     ],
     targets: [
         .binaryTarget(
