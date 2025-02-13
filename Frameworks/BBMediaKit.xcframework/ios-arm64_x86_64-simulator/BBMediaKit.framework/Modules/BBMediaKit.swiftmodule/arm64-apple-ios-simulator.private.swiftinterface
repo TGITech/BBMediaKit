@@ -205,8 +205,12 @@ public struct BBImageAd {
 public protocol BBMediaSessionDataSource : AnyObject {
   func mediaSessionFPS(_ sender: BBMediaKit.BBMediaSession) -> Swift.Float
 }
+public protocol BBMediaSessionDelegate : AnyObject {
+  func mediaSession(_ sender: BBMediaKit.BBMediaSession, didUpdateGlobalAugmentationState isGlobalAugmentationEnabled: Swift.Bool)
+}
 @objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
   weak public var dataSource: (any BBMediaKit.BBMediaSessionDataSource)?
+  weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)?
   weak public var contentView: UIKit.UIView? {
     get
     set
@@ -232,6 +236,14 @@ public protocol BBMediaSessionDataSource : AnyObject {
     set
   }
   public var allowRenderStreamFPS: Swift.Bool {
+    get
+    set
+  }
+  public var allowRenderResolution: Swift.Bool {
+    get
+    set
+  }
+  public var allowRenderLOD: Swift.Bool {
     get
     set
   }
