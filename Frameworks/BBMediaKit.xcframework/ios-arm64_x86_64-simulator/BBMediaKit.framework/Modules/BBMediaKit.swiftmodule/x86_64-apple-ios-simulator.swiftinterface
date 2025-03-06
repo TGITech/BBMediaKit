@@ -197,8 +197,10 @@ final public class BBAdsManager : BBMediaKit.Loggable {
 extension BBMediaKit.BBTimecode {
   public init(_ components: BBMediaKit.BBTimecode.Components, frameRate: BBMediaKit.BBTimecodeFrameRate)
   public init(_ frameCount: BBMediaKit.BBTimecode.FrameCount, frameRate: BBMediaKit.BBTimecodeFrameRate)
+  public static let zero: BBMediaKit.BBTimecode
 }
 public struct BBImageAd {
+  public let name: Swift.String
   public let image: UIKit.UIImage
   public let redirectURL: Foundation.URL?
 }
@@ -207,6 +209,8 @@ public protocol BBMediaSessionDataSource : AnyObject {
 }
 public protocol BBMediaSessionDelegate : AnyObject {
   func mediaSession(_ sender: BBMediaKit.BBMediaSession, didUpdateGlobalAugmentationState isGlobalAugmentationEnabled: Swift.Bool)
+  func mediaSessionDidAugmentationShot(_ sender: BBMediaKit.BBMediaSession, averagePercenOfScreen: CoreFoundation.CGFloat, averagePercenOfAd: CoreFoundation.CGFloat, duration: CoreMedia.CMTime)
+  func mediaSessionDidAugmentationClick(_ sender: BBMediaKit.BBMediaSession, redirectURL: Foundation.URL)
 }
 @objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
   weak public var dataSource: (any BBMediaKit.BBMediaSessionDataSource)?
@@ -240,6 +244,10 @@ public protocol BBMediaSessionDelegate : AnyObject {
     set
   }
   public var allowRenderResolution: Swift.Bool {
+    get
+    set
+  }
+  public var allowRenderTimer: Swift.Bool {
     get
     set
   }
@@ -277,8 +285,13 @@ extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegat
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
   @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
 }
+extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemLegibleOutputPushDelegate {
+  @objc dynamic public func legibleOutput(_ output: AVFoundation.AVPlayerItemLegibleOutput, didOutputAttributedStrings strings: [Foundation.NSAttributedString], nativeSampleBuffers: [Any], forItemTime itemTime: CoreMedia.CMTime)
+}
 public struct BBGameInfo : Swift.Codable {
   public let bucketName: Swift.String
+  public let customerId: Swift.String?
+  public let customerName: Swift.String?
   public let offsets: [BBMediaKit.BBOffset]
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
