@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1xfvYQG0QPeKBmo91dMu3NG3QgA=
+		Z9z4JK7/G8a1UFrmDCHlg3qgeDI=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		0UNBf2nld95Avjub70u9hMMGXxo=
+		wYijvTO6qnYYf4jAgu3t9xxyVY0=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		tI/BCMImbZ8RZalNx6DfHVTN9tc=
+		fhATnhVTQVnYjmhR/CEPQJ3ydRk=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		0UNBf2nld95Avjub70u9hMMGXxo=
+		wYijvTO6qnYYf4jAgu3t9xxyVY0=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nU3IVrBg48ddm5FNQFSAvA28C0c=
+		eLJSuxZn6cv3p/ucRHCjN4mEK/c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			orXgSrAvwy+lv/gz4NPYfTkM9acmoADwXmgB4QsvUcg=
+			ZGYw26Z3HzX2B59u4i24+oaLSwMcjwNo/AHmJPkdDKs=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -114,14 +114,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jEIT6LT87jjWbLNQvlQf0ywx4qy2ufcfL8tVoz2Y5ZI=
+			ud7IONP6uRXO6Y43qfHcRXBNxZO/TGXwdIc/8SqFvFc=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			orXgSrAvwy+lv/gz4NPYfTkM9acmoADwXmgB4QsvUcg=
+			ZGYw26Z3HzX2B59u4i24+oaLSwMcjwNo/AHmJPkdDKs=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,7 +149,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ze0NRucSvL5dIsIzCX2P3qXiZSQPEw/BH4BcxRlYxng=
+			uwLdC/3T+QQzR9K7+R791D4EsY4NrU+phps2MJZb1a0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
