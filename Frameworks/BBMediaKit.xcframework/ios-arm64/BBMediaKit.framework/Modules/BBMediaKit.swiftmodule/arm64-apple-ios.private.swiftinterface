@@ -207,14 +207,22 @@ public struct BBImageAd {
 public protocol BBMediaSessionDataSource : AnyObject {
   func mediaSessionFPS(_ sender: BBMediaKit.BBMediaSession) -> Swift.Float
 }
-public protocol BBMediaSessionDelegate : AnyObject {
+public protocol BBMediaSessionErrorDelegate : AnyObject {
+  func mediaSessionDidError(_ sender: BBMediaKit.BBMediaSession, error: any Swift.Error)
+}
+public protocol BBMediaSessionDelegate : BBMediaKit.BBMediaSessionErrorDelegate {
   func mediaSession(_ sender: BBMediaKit.BBMediaSession, didUpdateGlobalAugmentationState isGlobalAugmentationEnabled: Swift.Bool)
-  func mediaSessionDidAugmentationShot(_ sender: BBMediaKit.BBMediaSession, averagePercenOfScreen: CoreFoundation.CGFloat, averagePercenOfAd: CoreFoundation.CGFloat, duration: CoreMedia.CMTime)
-  func mediaSessionDidAugmentationClick(_ sender: BBMediaKit.BBMediaSession, redirectURL: Foundation.URL)
+  func mediaSessionDidBeginShotRendering()
+  func mediaSessionDidEndShotRendering()
+  func mediaSessionDidRegisterShot(_ sender: BBMediaKit.BBMediaSession, averagePercenOfScreen: CoreFoundation.CGFloat, averagePercenOfAd: CoreFoundation.CGFloat, duration: CoreMedia.CMTime)
+  func mediaSessionDidRegisterTap(_ sender: BBMediaKit.BBMediaSession, redirectURL: Foundation.URL)
 }
 @objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
   weak public var dataSource: (any BBMediaKit.BBMediaSessionDataSource)?
-  weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)?
+  weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)? {
+    get
+    set
+  }
   weak public var contentView: UIKit.UIView? {
     get
     set
@@ -377,11 +385,15 @@ public struct SourceFormat : Swift.Codable {
 }
 public protocol Loggable {
   var logger: any DatadogLogs.LoggerProtocol { get }
+  func logError(_ message: Swift.String, error: (any Swift.Error)?, attributes: [Swift.String : any Swift.Encodable]?)
+  func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
 }
 extension BBMediaKit.Loggable where Self : AnyObject {
   public var logger: any DatadogLogs.LoggerProtocol {
     get
   }
+  public func logError(_ message: Swift.String, error: (any Swift.Error)? = nil, attributes: [Swift.String : any Swift.Encodable]? = nil)
+  public func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
 }
 extension BBMediaKit.BBTimecode {
   public struct FrameCount {
