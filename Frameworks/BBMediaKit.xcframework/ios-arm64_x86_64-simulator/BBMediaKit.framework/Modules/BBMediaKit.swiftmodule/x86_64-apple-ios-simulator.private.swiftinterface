@@ -85,9 +85,6 @@ extension Foundation.FileManager {
   public func archivesDirectoryURL() -> Foundation.URL
   public func adsDirectoryURL() -> Foundation.URL
 }
-public struct FrameworkVersion {
-  public static let gitHash: Swift.String
-}
 extension BBMediaKit.BBTimecode {
   public struct Components {
   }
@@ -124,6 +121,9 @@ public enum BBFpsOption : Swift.Double {
 public class BBSessionConfiguration {
   public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true)
   @objc deinit
+}
+public enum BBVersion {
+  public static let value: Swift.String
 }
 public struct BBGlyphInfo {
   public let character: Swift.Character

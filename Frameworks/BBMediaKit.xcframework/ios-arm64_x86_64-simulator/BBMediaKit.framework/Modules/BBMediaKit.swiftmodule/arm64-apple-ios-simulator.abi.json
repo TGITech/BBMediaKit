@@ -1321,93 +1321,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BBMediaKit",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "FrameworkVersion",
-        "printedName": "FrameworkVersion",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "gitHash",
-            "printedName": "gitHash",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10BBMediaKit16FrameworkVersionV7gitHashSSvpZ",
-            "mangledName": "$s10BBMediaKit16FrameworkVersionV7gitHashSSvpZ",
-            "moduleName": "BBMediaKit",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10BBMediaKit16FrameworkVersionV7gitHashSSvgZ",
-                "mangledName": "$s10BBMediaKit16FrameworkVersionV7gitHashSSvgZ",
-                "moduleName": "BBMediaKit",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:10BBMediaKit16FrameworkVersionV",
-        "mangledName": "$s10BBMediaKit16FrameworkVersionV",
-        "moduleName": "BBMediaKit",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "AVKit",
         "printedName": "AVKit",
         "declKind": "Import",
@@ -3589,6 +3502,84 @@
         "moduleName": "BBMediaKit",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BBVersion",
+        "printedName": "BBVersion",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10BBMediaKit9BBVersionO5valueSSvpZ",
+            "mangledName": "$s10BBMediaKit9BBVersionO5valueSSvpZ",
+            "moduleName": "BBMediaKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10BBMediaKit9BBVersionO5valueSSvgZ",
+                "mangledName": "$s10BBMediaKit9BBVersionO5valueSSvgZ",
+                "moduleName": "BBMediaKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10BBMediaKit9BBVersionO",
+        "mangledName": "$s10BBMediaKit9BBVersionO",
+        "moduleName": "BBMediaKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -12690,13 +12681,6 @@
       "value": "\"AuthToken1jZDLbtswEEW_xtpJ4GsocqGF6qZJ0BpdOFl0SZGjWLAkOiQVx_760nm0QNEWAYjh4M69M8BpFzfgbLHZpXSIK96u2Jf8Ao6nYX44mJBO1SF411VzZ6r0xO3oF1dZP2VXcRvjguGPbEzxP5GL97fV7nAysXqexujNofLhIavHmAsjBPL3UgaHcxrSKbd2NMN0mc9mwmaJJRLWAatpKZgwpagllJ0lrOQgjDY9CNfT4g5nM6db1zjszTKmoh1Hf0T3rsdfg_uIIfs-uri11i8vmzuiLUhtSo1El4LqbAewpaxrlQOIVOri8-uVtyMfivyV1zTY4KPv0xvVd2LqQkz-g1jwIzZx6aINQ4ehaJe082E4mzT4eWPivqGgqeCCgwRKOa0ZCKVrxjjVgkitmJRKcUYFaKkYAAXKpAZFtJJAGGVcMy4I5bmHmgmmgMrcqOLq-TAEjN_nhtacE0nykWId0CR0ryITADKLX_F0vQwZDqBF6bpScIkZjiWl6llfolLaamIJQSxuNu16e9MykI157MNZuvP2ro67dtzuwtGR7Tf_uJ43e_Uk9tdpf8XuP4H9seLuJw\""
     },
     {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Utils\/Version.swift",
-      "kind": "StringLiteral",
-      "offset": 174,
-      "length": 9,
-      "value": "\"6976d56\""
-    },
-    {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/CanvasView\/BBCanvasView.swift",
       "kind": "BooleanLiteral",
       "offset": 522,
@@ -13346,6 +13330,13 @@
       "offset": 500,
       "length": 39,
       "value": "\"https:\/\/games-dev.virtualott.com\/map\/\""
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/BBVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 105,
+      "length": 8,
+      "value": "\"1.0.74\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/CanvasView\/Legacy\/BBAugmentationRendererView.swift",
