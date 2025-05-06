@@ -283,8 +283,8 @@ public protocol BBMediaSessionDelegate : BBMediaKit.BBMediaSessionErrorDelegate 
   @objc deinit
   @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
   public func toggle(isEnabled: Swift.Bool)
-  public func begin()
-  public func end()
+  public func begin(canChangeDidBegin: Swift.Bool = true)
+  public func end(canChangeDidBegin: Swift.Bool = true)
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegate {
   @objc dynamic public func outputMediaDataWillChange(_ sender: AVFoundation.AVPlayerItemOutput)
