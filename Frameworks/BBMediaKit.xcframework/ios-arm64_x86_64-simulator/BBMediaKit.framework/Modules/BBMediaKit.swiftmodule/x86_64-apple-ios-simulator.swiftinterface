@@ -217,6 +217,17 @@ public protocol BBMediaSessionDelegate : BBMediaKit.BBMediaSessionErrorDelegate 
   func mediaSessionDidRegisterShot(_ sender: BBMediaKit.BBMediaSession, averagePercenOfScreen: CoreFoundation.CGFloat, averagePercenOfAd: CoreFoundation.CGFloat, duration: CoreMedia.CMTime)
   func mediaSessionDidRegisterTap(_ sender: BBMediaKit.BBMediaSession, redirectURL: Foundation.URL)
 }
+public enum BBGlobalAugmentationState : Swift.Int {
+  case uninitialized
+  case disabled
+  case enabled
+  public init(boolValue: Swift.Bool)
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
   weak public var dataSource: (any BBMediaKit.BBMediaSessionDataSource)?
   weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)? {
@@ -283,8 +294,8 @@ public protocol BBMediaSessionDelegate : BBMediaKit.BBMediaSessionErrorDelegate 
   @objc deinit
   @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
   public func toggle(isEnabled: Swift.Bool)
-  public func begin(canChangeDidBegin: Swift.Bool = true)
-  public func end(canChangeDidBegin: Swift.Bool = true)
+  public func begin()
+  public func end()
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegate {
   @objc dynamic public func outputMediaDataWillChange(_ sender: AVFoundation.AVPlayerItemOutput)
@@ -409,6 +420,9 @@ extension BBMediaKit.BBFpsOption : Swift.RawRepresentable {}
 extension BBMediaKit.BBPScalingMode : Swift.Equatable {}
 extension BBMediaKit.BBPScalingMode : Swift.Hashable {}
 extension BBMediaKit.BBPScalingMode : Swift.RawRepresentable {}
+extension BBMediaKit.BBGlobalAugmentationState : Swift.Equatable {}
+extension BBMediaKit.BBGlobalAugmentationState : Swift.Hashable {}
+extension BBMediaKit.BBGlobalAugmentationState : Swift.RawRepresentable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.Equatable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.Hashable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.RawRepresentable {}
