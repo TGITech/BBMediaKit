@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/p6dX2R0GPgld/k0EYbLRZl5Sv8=
+		BKVe6vTMGdPkPyBpZiJRcN+tJFM=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		JUWXoHAJItAJUQhtVq1G9hDCeR4=
+		whH2oCLcYPb32jMuvj65stLUibk=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fksPJR6zjMkKEa09JxwK8HvJNrI=
+		Uk9xZF3zSHm+kRmXlnuVPv1Rn1U=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		JUWXoHAJItAJUQhtVq1G9hDCeR4=
+		whH2oCLcYPb32jMuvj65stLUibk=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		b8kfkDAf2wg+w6/2mSzPWJPZxnQ=
+		vScZIAay9pNnpzyxmhLOlHHY2rk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pS1UcKwiSRste8wFVMQomsQOv4hD3JKe04gTcVKzNGY=
+			StqGSLIKQBKAf5lXqNocUAH9pH7oVqHu08d5E4yB+bY=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -114,14 +114,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iet34c6Snt2V2nY3XPTVBcO7n0vM8Sj6ZJTJBvqlYz8=
+			gB+SBHhZ4Vpo31E29OiIHQrzEaGIB9hjYPM4nUDbHgI=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pS1UcKwiSRste8wFVMQomsQOv4hD3JKe04gTcVKzNGY=
+			StqGSLIKQBKAf5lXqNocUAH9pH7oVqHu08d5E4yB+bY=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,7 +149,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BeXm8SOaykq2SucYucYB8zeZ3r42UiiK9Quqli+5I7Q=
+			YSRYR7aNt960hd/1wuhZbtlB6+NTAQUM5M7GRxKhPfY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
