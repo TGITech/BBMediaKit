@@ -228,6 +228,17 @@ public enum BBGlobalAugmentationState : Swift.Int {
     get
   }
 }
+public enum BBToggleState : Swift.Int {
+  case uninitialized
+  case disabled
+  case enabled
+  public init(boolValue: Swift.Bool)
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
   weak public var dataSource: (any BBMediaKit.BBMediaSessionDataSource)?
   weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)? {
@@ -423,6 +434,9 @@ extension BBMediaKit.BBPScalingMode : Swift.RawRepresentable {}
 extension BBMediaKit.BBGlobalAugmentationState : Swift.Equatable {}
 extension BBMediaKit.BBGlobalAugmentationState : Swift.Hashable {}
 extension BBMediaKit.BBGlobalAugmentationState : Swift.RawRepresentable {}
+extension BBMediaKit.BBToggleState : Swift.Equatable {}
+extension BBMediaKit.BBToggleState : Swift.Hashable {}
+extension BBMediaKit.BBToggleState : Swift.RawRepresentable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.Equatable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.Hashable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.RawRepresentable {}
