@@ -5,7 +5,6 @@
 import AVFoundation
 import AVKit
 @_exported import BBMediaKit
-import CSV
 import CoreGraphics
 import CoreImage
 import CoreMedia
@@ -15,11 +14,9 @@ import DatadogLogs
 import Foundation
 import Metal
 import MetalKit
-import OSLog
 import QuartzCore
 import SocketIO
 import Swift
-import SwiftUI
 import UIKit
 import VideoToolbox
 import Vision
@@ -95,18 +92,6 @@ extension BBMediaKit.BBTimecode {
 extension BBMediaKit.BBTimecode.Components {
   public static func components(days: Swift.Int = 0, hours: Swift.Int = 0, minutes: Swift.Int = 0, seconds: Swift.Int = 0, frames: Swift.Int = 0) -> BBMediaKit.BBTimecode.Components
   public static let zero: BBMediaKit.BBTimecode.Components
-}
-extension BBMediaKit.NBALogger {
-  public func trace(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func debug(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func info(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func notice(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func warning(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func error(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func critical(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func fault(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func log(_ info: Swift.String, value: (any Swift.Encodable)? = nil, level: BBMediaKit.NBALogger.Level = .default, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public static func log(_ info: Swift.String, _ category: Swift.String, _ level: BBMediaKit.NBALogger.Level = .default, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file, fileID: Swift.String = #fileID)
 }
 public struct BBTimecode {
   public var components: BBMediaKit.BBTimecode.Components
@@ -208,20 +193,6 @@ final public class BBAdsManager : BBMediaKit.Loggable {
   final public func updateCurrentTimecode(_ timecode: Foundation.TimeInterval)
   final public func startLoadingMetadata(from startTime: Foundation.TimeInterval)
   final public func stopLoadingMetadata(_ shouldClearDownloads: Swift.Bool = false)
-}
-public enum NBALocalLogger {
-  public static func setLocalLoggingEnabled(_ enabled: Swift.Bool)
-  public static var isLocalLoggingEnabled: Swift.Bool {
-    get
-  }
-  public static func log(_ message: Swift.String, value: (any Swift.Encodable)?, system: Swift.String, category: Swift.String, level: Swift.String, functionName: Swift.String = #function, lineNumber: Swift.Int = #line, fileName: Swift.String = #file)
-}
-@_Concurrency.MainActor @preconcurrency public struct NBALocalLogView : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public init()
-  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10BBMediaKit15NBALocalLogViewV4bodyQrvp", 0) __
 }
 extension BBMediaKit.BBTimecode {
   public init(_ components: BBMediaKit.BBTimecode.Components, frameRate: BBMediaKit.BBTimecodeFrameRate)
@@ -446,22 +417,6 @@ extension BBMediaKit.Loggable where Self : AnyObject {
   public func logError(_ message: Swift.String, error: (any Swift.Error)? = nil, attributes: [Swift.String : any Swift.Encodable]? = nil)
   public func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
 }
-extension BBMediaKit.NBALogger {
-  public enum Level : Swift.String {
-    case `default`, trace, debug, info, notice, warning, error, critical, fault
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-}
-public struct NBALogger {
-  public init(_ category: Swift.String, fileID: Swift.String = #fileID)
-}
-extension BBMediaKit.NBALogger : Swift.Equatable {
-  public static func == (lhs: BBMediaKit.NBALogger, rhs: BBMediaKit.NBALogger) -> Swift.Bool
-}
 extension BBMediaKit.BBTimecode {
   public struct FrameCount {
     public var frames: Swift.Int64
@@ -476,7 +431,6 @@ extension BBMediaKit.BBFpsOption : Swift.RawRepresentable {}
 extension BBMediaKit.BBPScalingMode : Swift.Equatable {}
 extension BBMediaKit.BBPScalingMode : Swift.Hashable {}
 extension BBMediaKit.BBPScalingMode : Swift.RawRepresentable {}
-extension BBMediaKit.NBALocalLogView : Swift.Sendable {}
 extension BBMediaKit.BBGlobalAugmentationState : Swift.Equatable {}
 extension BBMediaKit.BBGlobalAugmentationState : Swift.Hashable {}
 extension BBMediaKit.BBGlobalAugmentationState : Swift.RawRepresentable {}
@@ -486,6 +440,3 @@ extension BBMediaKit.BBToggleState : Swift.RawRepresentable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.Equatable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.Hashable {}
 extension BBMediaKit.BBTimecodeFrameRate : Swift.RawRepresentable {}
-extension BBMediaKit.NBALogger.Level : Swift.Equatable {}
-extension BBMediaKit.NBALogger.Level : Swift.Hashable {}
-extension BBMediaKit.NBALogger.Level : Swift.RawRepresentable {}
