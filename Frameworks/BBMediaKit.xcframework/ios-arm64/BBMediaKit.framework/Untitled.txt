@@ -1,0 +1,52 @@
+default    23:50:13.075758+0300    NBA    Task <6C4D1421-24E8-444A-A629-576049592403>.<952> received response, status 200 content K
+default    23:50:13.083403+0300    NBA    Task <6C4D1421-24E8-444A-A629-576049592403>.<952> done using Connection 170
+default    23:50:13.083506+0300    NBA    [C170] event: client:connection_idle @2059.466s
+default    23:50:13.083671+0300    NBA    Task <6C4D1421-24E8-444A-A629-576049592403>.<952> response ended
+default    23:50:13.083703+0300    NBA    Task <6C4D1421-24E8-444A-A629-576049592403>.<952> summary for task success {transaction_duration_ms=248, response_status=200, connection=170, reused=1, reused_after_ms=1365, request_start_ms=0, request_duration_ms=0, response_start_ms=241, response_duration_ms=7, request_bytes=279, request_throughput_kbps=5340, response_bytes=6960, response_throughput_kbps=873, cache_hit=false}
+default    23:50:13.083828+0300    NBA    Task <6C4D1421-24E8-444A-A629-576049592403>.<952> finished successfully
+default    23:50:13.085154+0300    NBA    <<<< FigCustomURLHandling >>>> curlh_finishLoadingOnQueue: AVAssetResourceLoader.0x12f972380: requestID: 3976, error: <private> (0)
+default    23:50:13.088696+0300    NBA    <<<< FigCustomURLHandling >>>> curlh_handleRequestOnQueue: com.apple.avfoundation.customurl.nsurlsession.0x1271fe380: issuing requestID: 3978
+default    23:50:13.088757+0300    NBA    <<<< FigCustomURLHandling >>>> curlh_handleRequestCompletionHandler: com.apple.avfoundation.customurl.nsurlsession.0x1271fe380: requestID: 3978, willHandle: NO
+default    23:50:13.088851+0300    NBA    SeekableTimeRanges changed {4.008000, 4852.429000} -> {4.008000, 4852.429000}.
+default    23:50:13.089004+0300    NBA    <<<< FigCustomURLHandling >>>> curlh_handleRequestOnQueue: com.apple.avfoundation.authkeychain.0x14086fb00: issuing requestID: 3978
+default    23:50:13.089035+0300    NBA    <<<< FigCustomURLHandling >>>> curlh_handleRequestCompletionHandler: com.apple.avfoundation.authkeychain.0x14086fb00: requestID: 3978, willHandle: NO
+default    23:50:13.089196+0300    NBA    <<<< FigCustomURLHandling >>>> curlh_handleRequestOnQueue: AVAssetResourceLoader.0x12f972380: issuing requestID: 3978
+default    23:50:13.089741+0300    NBA    <<<< FigCustomURLHandling >>>> curlh_handleRequestCompletionHandler: AVAssetResourceLoader.0x12f972380: requestID: 3978, willHandle: YES
+default    23:50:13.089832+0300    NBA    <<<< FigCustomURLHandling >>>> curlh_finishLoadingOnQueue: AVAssetResourceLoader.0x12f972380: requestID: 3978, error: <private> (0)
+default    23:50:13.780210+0300    NBA    {"msg":"CLLocationManager", "event":"activity", "_cmd":"initWithEffectiveBundleIdentifier:bundlePath:websiteIdentifier:delegate:silo:", "self":"0x14d344fd0", "identifier":"", "bundlePath":""}
+default    23:50:13.780442+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d344fd0", "property":"init", "new":{"trackRunInfoEnabled":false,"previousAuthorizationStatusValid":false,"paused":false,"requestingLocation":false,"updatingVehicleSpeed":false,"desiredAccuracy":-1,"allowsBackgroundLocationUpdates":false,"dynamicAccuracyReductionEnabled":false,"distanceFilter":-1,"allowsLocationPrompts":true,"activityType":0,"groundAltitudeEnabled":false,"pausesLocationUpdatesAutomatically":0,"fusionInfoEnabled":false,"isAuthorizedForWidgetUpdates":false,"updatingVehicleHeading":false,"batchingLocation":false,"showsBackgroundLocationIndicator":false,"updatingLocation":false,"updatingHeading":false,"previousAuthorizationStatus":0,"allowsMapCorrection":true,"matchInfoEnabled":false,"allowsAlteredAccessoryLocations":false,"limitsPrecision":false,"courtesyPromptNeeded":false,"headingFilter":1}}
+default    23:50:13.780509+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d344fd0", "property":"lifecycle", "old":"0x0", "new":"0x1486c2fb0"}
+default    23:50:13.780546+0300    NBA    {"msg":"client allocated", "client":"0x14848c000"}
+default    23:50:13.780668+0300    NBA    {"msg":"_CLClientCreateConnection", "event":"activity", "client":"0x14848c000"}
+default    23:50:13.780775+0300    NBA    {"msg":"Sending cached messages to daemon", "event":"activity"}
+default    23:50:13.780806+0300    NBA    [0x12700b0c0] activating connection: mach=true listener=false peer=false name=com.apple.locationd.registration
+default    23:50:13.781064+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d344fd0", "property":"pausesLocationUpdatesAutomatically", "old":{"type":"decode failure","raw value":0,"expected type":"Generic"}, "new":{"type":"decode failure","raw value":5,"expected type":"Generic"}}
+default    23:50:13.781316+0300    NBA    {"msg":"CLInternalGetAuthorizationStatus", "event":"activity"}
+default    23:50:13.791445+0300    NBA    {"msg":"CLLocationManager", "event":"activity", "_cmd":"dealloc", "self":"0x14d344fd0"}
+default    23:50:13.791493+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d344fd0", "property":"requestingLocation", "old":0, "new":0}
+default    23:50:13.791523+0300    NBA    {"msg":"invalidating client", "client":"0x14848c000"}
+default    23:50:13.791575+0300    NBA    {"msg":"invalidating client", "client":"0x14848c000"}
+default    23:50:13.791692+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d344fd0", "property":"lifecycle", "old":"0x1486c2fb0", "new":"0x0"}
+default    23:50:13.791719+0300    NBA    [0x12700b0c0] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+default    23:50:13.804024+0300    NBA    {"msg":"CLLocationManager", "event":"activity", "_cmd":"initWithEffectiveBundleIdentifier:bundlePath:websiteIdentifier:delegate:silo:", "self":"0x14d346540", "identifier":"", "bundlePath":""}
+default    23:50:13.804162+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d346540", "property":"init", "new":{"trackRunInfoEnabled":false,"previousAuthorizationStatusValid":false,"paused":false,"requestingLocation":false,"updatingVehicleSpeed":false,"desiredAccuracy":-1,"allowsBackgroundLocationUpdates":false,"dynamicAccuracyReductionEnabled":false,"distanceFilter":-1,"allowsLocationPrompts":true,"activityType":0,"groundAltitudeEnabled":false,"pausesLocationUpdatesAutomatically":0,"fusionInfoEnabled":false,"isAuthorizedForWidgetUpdates":false,"updatingVehicleHeading":false,"batchingLocation":false,"showsBackgroundLocationIndicator":false,"updatingLocation":false,"updatingHeading":false,"previousAuthorizationStatus":0,"allowsMapCorrection":true,"matchInfoEnabled":false,"allowsAlteredAccessoryLocations":false,"limitsPrecision":false,"courtesyPromptNeeded":false,"headingFilter":1}}
+default    23:50:13.804290+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d346540", "property":"lifecycle", "old":"0x0", "new":"0x1486c2a00"}
+default    23:50:13.804342+0300    NBA    {"msg":"client allocated", "client":"0x14848ed80"}
+default    23:50:13.804491+0300    NBA    {"msg":"_CLClientCreateConnection", "event":"activity", "client":"0x14848ed80"}
+default    23:50:13.804640+0300    NBA    {"msg":"Sending cached messages to daemon", "event":"activity"}
+default    23:50:13.804672+0300    NBA    [0x127008640] activating connection: mach=true listener=false peer=false name=com.apple.locationd.registration
+default    23:50:13.804974+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d346540", "property":"pausesLocationUpdatesAutomatically", "old":{"type":"decode failure","raw value":0,"expected type":"Generic"}, "new":{"type":"decode failure","raw value":5,"expected type":"Generic"}}
+default    23:50:13.805310+0300    NBA    {"msg":"CLInternalGetAuthorizationStatus", "event":"activity"}
+default    23:50:13.816162+0300    NBA    {"msg":"CLLocationManager", "event":"activity", "_cmd":"dealloc", "self":"0x14d346540"}
+default    23:50:13.816206+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d346540", "property":"requestingLocation", "old":0, "new":0}
+default    23:50:13.816236+0300    NBA    {"msg":"invalidating client", "client":"0x14848ed80"}
+default    23:50:13.816293+0300    NBA    {"msg":"invalidating client", "client":"0x14848ed80"}
+default    23:50:13.816387+0300    NBA    {"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x14d346540", "property":"lifecycle", "old":"0x1486c2a00", "new":"0x0"}
+default    23:50:13.816415+0300    NBA    [0x127008640] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+default    23:50:13.816689+0300    NBA    D/MKPLog: [MKPQuartileEventManager:onTimeChanged:585] -> PlayerCurrentTime = 1747601388.1321425 out of AdBreak
+default    23:50:13.817068+0300    NBA    {"msg":"client about to be destroyed", "client":"0x14848c000"}
+default    23:50:13.817101+0300    NBA    -[AVPlayerController startInspectionIfNeeded]_block_invoke Main player rate changed. rate = 0.999955, item currentTime = 4849.063542
+default    23:50:13.817127+0300    NBA    <<<< FigDeferredTransaction >>>> fdt_commitTransactionOnMainQueue: Warning: deferred transaction <private> was delayed by 0.022s before it began running
+default    23:50:13.817159+0300    NBA    <<<< LayerSync >>>> figlayersync_getLayerDisplayLatency: layer 0x1276c13b0, context 0x1277fcd70, displayID 1: latency 0.000
+default    23:50:13.817188+0300    NBA    <<<< LayerSync >>>> figlayersync_setLayerTiming: (layer 0x1276c13b0) only set layer timeOffset: 0.000000 at hostTime 119694.918494
+default    23:50:13.817243+0300    NBA    {"msg":"client about to be destroyed", "client":"0x14848ed80"}
