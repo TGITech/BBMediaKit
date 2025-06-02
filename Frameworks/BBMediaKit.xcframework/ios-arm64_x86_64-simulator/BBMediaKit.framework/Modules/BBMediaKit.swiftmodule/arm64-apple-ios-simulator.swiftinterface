@@ -1,11 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios15.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BBMediaKit
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios15.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BBMediaKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import AVFoundation
 import AVKit
 @_exported import BBMediaKit
-import CSV
 import CoreGraphics
 import CoreImage
 import CoreMedia
@@ -15,11 +14,9 @@ import DatadogLogs
 import Foundation
 import Metal
 import MetalKit
-import OSLog
 import QuartzCore
 import SocketIO
 import Swift
-import SwiftUI
 import UIKit
 import VideoToolbox
 import Vision
@@ -87,48 +84,6 @@ extension Foundation.FileManager {
   public func documentsDirectoryURL() -> Foundation.URL
   public func archivesDirectoryURL() -> Foundation.URL
   public func adsDirectoryURL() -> Foundation.URL
-}
-extension BBMediaKit.NBALogger {
-  public enum Level : Swift.String {
-    case `default`, trace, debug, info, notice, warning, error, critical, fault
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-}
-@_Concurrency.MainActor @preconcurrency public struct NBALocalLogView : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public init()
-  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10BBMediaKit15NBALocalLogViewV4bodyQrvp", 0) __
-}
-public enum NBALocalLogger {
-  public static func setLocalLoggingEnabled(_ enabled: Swift.Bool)
-  public static var isLocalLoggingEnabled: Swift.Bool {
-    get
-  }
-  public static func log(_ message: Swift.String, value: (any Swift.Encodable)?, system: Swift.String, category: Swift.String, level: Swift.String, functionName: Swift.String = #function, lineNumber: Swift.Int = #line, fileName: Swift.String = #file)
-}
-public struct NBALogger {
-  public init(_ category: Swift.String, fileID: Swift.String = #fileID)
-}
-extension BBMediaKit.NBALogger : Swift.Equatable {
-  public static func == (lhs: BBMediaKit.NBALogger, rhs: BBMediaKit.NBALogger) -> Swift.Bool
-}
-extension BBMediaKit.NBALogger {
-  public func trace(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func debug(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func info(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func notice(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func warning(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func error(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func critical(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func fault(_ info: Swift.String, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public func log(_ info: Swift.String, value: (any Swift.Encodable)? = nil, level: BBMediaKit.NBALogger.Level = .default, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file)
-  public static func log(_ info: Swift.String, _ category: Swift.String, _ level: BBMediaKit.NBALogger.Level = .default, value: (any Swift.Encodable)? = nil, isPrivate: Swift.Bool = false, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file, fileID: Swift.String = #fileID)
 }
 extension BBMediaKit.BBTimecode {
   public struct Components {
@@ -257,10 +212,10 @@ public protocol BBMediaSessionErrorDelegate : AnyObject {
 }
 public protocol BBMediaSessionDelegate : BBMediaKit.BBMediaSessionErrorDelegate {
   func mediaSession(_ sender: BBMediaKit.BBMediaSession, didUpdateGlobalAugmentationState isGlobalAugmentationEnabled: Swift.Bool)
-  func mediaSessionDidBeginShotRendering()
-  func mediaSessionDidEndShotRendering()
-  func mediaSessionDidRegisterShot(_ sender: BBMediaKit.BBMediaSession, averagePercenOfScreen: CoreFoundation.CGFloat, averagePercenOfAd: CoreFoundation.CGFloat, duration: CoreMedia.CMTime)
-  func mediaSessionDidRegisterTap(_ sender: BBMediaKit.BBMediaSession, redirectURL: Foundation.URL)
+  func mediaSessionDidBeginShotRendering(adID: Swift.String, adURL: Swift.String)
+  func mediaSessionDidEndShotRendering(adID: Swift.String, adURL: Swift.String)
+  func mediaSessionDidRegisterShot(_ sender: BBMediaKit.BBMediaSession, adID: Swift.String, adURL: Swift.String, averagePercenOfScreen: CoreFoundation.CGFloat, averagePercenOfAd: CoreFoundation.CGFloat, duration: CoreMedia.CMTime)
+  func mediaSessionDidRegisterTap(_ sender: BBMediaKit.BBMediaSession, adID: Swift.String, redirectURL: Foundation.URL)
 }
 public enum BBGlobalAugmentationState : Swift.Int {
   case uninitialized
@@ -470,10 +425,6 @@ extension BBMediaKit.BBTimecode {
 }
 extension BBMediaKit.BBTimecode.Format : Swift.Equatable {}
 extension BBMediaKit.BBTimecode.Format : Swift.Hashable {}
-extension BBMediaKit.NBALogger.Level : Swift.Equatable {}
-extension BBMediaKit.NBALogger.Level : Swift.Hashable {}
-extension BBMediaKit.NBALogger.Level : Swift.RawRepresentable {}
-extension BBMediaKit.NBALocalLogView : Swift.Sendable {}
 extension BBMediaKit.BBFpsOption : Swift.Equatable {}
 extension BBMediaKit.BBFpsOption : Swift.Hashable {}
 extension BBMediaKit.BBFpsOption : Swift.RawRepresentable {}
