@@ -169,6 +169,7 @@ extension BBMediaKit.BBTimecode {
 public typealias AdUpdatedBlock = (_ advertising: BBMediaKit.BBImageAd) -> Swift.Void
 final public class BBAdsManager : BBMediaKit.Loggable {
   public static let shared: BBMediaKit.BBAdsManager
+  final public var adsURLString: Swift.String?
   final public var adsLoaded: Swift.Bool
   final public var currentAdItem: BBMediaKit.BBImageAd? {
     get
@@ -180,6 +181,9 @@ final public class BBAdsManager : BBMediaKit.Loggable {
   final public func connectToAdsListener()
   final public func disconnectAdsListener()
   @objc deinit
+}
+extension BBMediaKit.BBAdsManager {
+  final public func reloadAds()
 }
 @objc @_hasMissingDesignatedInitializers final public class BBMetadataWorker : ObjectiveC.NSObject, BBMediaKit.Loggable {
   final public var didRestartLoading: (() -> Swift.Void)?
@@ -203,6 +207,7 @@ public struct BBImageAd {
   public let name: Swift.String
   public let image: UIKit.UIImage
   public let redirectURL: Foundation.URL?
+  public let imageUrl: Swift.String
 }
 public protocol BBMediaSessionDataSource : AnyObject {
   func mediaSessionFPS(_ sender: BBMediaKit.BBMediaSession) -> Swift.Float
@@ -405,13 +410,20 @@ public struct SourceFormat : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+@_hasMissingDesignatedInitializers public class TrackingInfo {
+  @objc deinit
+}
 public protocol Loggable {
   var logger: any DatadogLogs.LoggerProtocol { get }
+  var metrics: BBMediaKit.TrackingInfo { get }
   func logError(_ message: Swift.String, error: (any Swift.Error)?, attributes: [Swift.String : any Swift.Encodable]?)
   func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
 }
 extension BBMediaKit.Loggable where Self : AnyObject {
   public var logger: any DatadogLogs.LoggerProtocol {
+    get
+  }
+  public var metrics: BBMediaKit.TrackingInfo {
     get
   }
   public func logError(_ message: Swift.String, error: (any Swift.Error)? = nil, attributes: [Swift.String : any Swift.Encodable]? = nil)
