@@ -14347,8 +14347,8 @@
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/BBVersion.swift",
       "kind": "StringLiteral",
       "offset": 105,
-      "length": 8,
-      "value": "\"1.0.99\""
+      "length": 9,
+      "value": "\"1.0.100\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/CanvasView\/Legacy\/BBAugmentationRendererView.swift",
