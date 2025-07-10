@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DFiUqXnOUJfs/u4Mdm0S2nqvY+k=
+		ain5n1t9p/T+kGq/9PBF69gCb4k=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3O1MeKj/DKFHehr5O3hCOc+xL0w=
+		d8F/2OrtvazYL8qwKdtrB5FWYlQ=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DFiUqXnOUJfs/u4Mdm0S2nqvY+k=
+		ain5n1t9p/T+kGq/9PBF69gCb4k=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		k8rDCGXMCvQsveWXUaERtrnzBHA=
+		OLi1lQhPPhUfffJjy9Eja5XmdRU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		1MvDt5KstqYdW5pKf6shMNxEgE8=
+		WZUwkSpNWqVEb33noclWDxuBAH0=
 		</data>
 		<key>demo.alpha</key>
 		<data>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X/+gbv27qFaIzCmeUq/pm0CdfRpYixPh0T4YzYOtW+4=
+			win4cSTRYQBgI7E9f5trdpoP82Nvv5DX7BpaEO7erZA=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -114,14 +114,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lleOUw9Im1QnytpRfX0rHzlAWTUkY+5370/TyfqPBIw=
+			ebq9mPJkCn/fPLy5W7eviIEaw8fqXGXfzVlmQzmXClg=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X/+gbv27qFaIzCmeUq/pm0CdfRpYixPh0T4YzYOtW+4=
+			win4cSTRYQBgI7E9f5trdpoP82Nvv5DX7BpaEO7erZA=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,7 +149,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VtHP031qh1aqSgJkwiuCqS1Ug1P46XjPwBZ/AkdFCTc=
+			4BA9N1kFmjlKhWXRYwwqHr6FCSuYHwMeOr1UMLhB3DM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CyUAePIj7QUwCDXwB+qbRM+4MtrVZ1DZ3RmMH6+VKJ0=
+			DFAx/dX1ZWZGPhMTA9j5Ip9hM/R5EZEdneO96SEK+bo=
 			</data>
 		</dict>
 		<key>demo.alpha</key>
