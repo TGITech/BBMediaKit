@@ -13628,34 +13628,34 @@
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "IntegerLiteral",
       "offset": 905,
-      "length": 1,
-      "value": "1"
+      "length": 2,
+      "value": "50"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1795,
+      "offset": 1796,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1839,
+      "offset": 1840,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1901,
+      "offset": 1902,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2203,
+      "offset": 2204,
       "length": 1,
       "value": "1"
     },
@@ -14399,7 +14399,7 @@
       "kind": "StringLiteral",
       "offset": 105,
       "length": 9,
-      "value": "\"1.0.122\""
+      "value": "\"1.0.123\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/CanvasView\/Legacy\/BBAugmentationRendererView.swift",
