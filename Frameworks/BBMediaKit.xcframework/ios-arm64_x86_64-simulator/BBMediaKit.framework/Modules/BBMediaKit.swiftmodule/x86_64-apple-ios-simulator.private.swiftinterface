@@ -27,6 +27,7 @@ import ZIPFoundation
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import os
 import simd
 extension BBMediaKit.BBTimecode {
   public enum Format {
@@ -211,9 +212,6 @@ public struct BBImageAd {
   public let redirectURL: Foundation.URL?
   public let imageUrl: Swift.String
 }
-public protocol BBMediaSessionDataSource : AnyObject {
-  func mediaSessionFPS(_ sender: BBMediaKit.BBMediaSession) -> Swift.Float
-}
 public protocol BBMediaSessionErrorDelegate : AnyObject {
   func mediaSessionDidError(_ sender: BBMediaKit.BBMediaSession, error: any Swift.Error)
 }
@@ -247,7 +245,6 @@ public enum BBToggleState : Swift.Int {
   }
 }
 @objc public class BBMediaSession : ObjectiveC.NSObject, BBMediaKit.Loggable {
-  weak public var dataSource: (any BBMediaKit.BBMediaSessionDataSource)?
   weak public var delegate: (any BBMediaKit.BBMediaSessionDelegate)? {
     get
     set
@@ -314,6 +311,15 @@ public enum BBToggleState : Swift.Int {
   public func toggle(isEnabled: Swift.Bool)
   public func begin()
   public func end()
+  public func handlePipWillStart()
+  public func handlePipDidStart()
+  public func handlePipWillStop()
+  public func handlePipDidStop()
+  public func handlePipRestoreUI()
+  public func handleAdStarted()
+  public func handleAdFinished()
+  public func handleAdBreakStarted()
+  public func handleAdBreakEnd()
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegate {
   @objc dynamic public func outputMediaDataWillChange(_ sender: AVFoundation.AVPlayerItemOutput)
