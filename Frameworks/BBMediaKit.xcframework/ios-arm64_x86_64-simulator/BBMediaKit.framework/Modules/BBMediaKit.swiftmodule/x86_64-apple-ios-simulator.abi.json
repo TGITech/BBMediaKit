@@ -576,7 +576,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "((any Swift.Error)?, Foundation.URL?) -> ()",
+                "printedName": "((any Swift.Error)?, Foundation.URL?, ZIPFoundation.Archive?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -586,7 +586,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "((any Swift.Error)?, Foundation.URL?)",
+                    "printedName": "((any Swift.Error)?, Foundation.URL?, ZIPFoundation.Archive?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -615,6 +615,20 @@
                           }
                         ],
                         "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "ZIPFoundation.Archive?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Archive",
+                            "printedName": "ZIPFoundation.Archive",
+                            "usr": "s:13ZIPFoundation7ArchiveC"
+                          }
+                        ],
+                        "usr": "s:Sq"
                       }
                     ]
                   }
@@ -622,8 +636,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10BBMediaKit15DownloadManagerC03addC03url14destinationURL12onCompletiony10Foundation0H0V_AJys5Error_pSg_AJSgtctF",
-            "mangledName": "$s10BBMediaKit15DownloadManagerC03addC03url14destinationURL12onCompletiony10Foundation0H0V_AJys5Error_pSg_AJSgtctF",
+            "usr": "s:10BBMediaKit15DownloadManagerC03addC03url14destinationURL12onCompletiony10Foundation0H0V_AJys5Error_pSg_AJSg13ZIPFoundation7ArchiveCSgtctF",
+            "mangledName": "$s10BBMediaKit15DownloadManagerC03addC03url14destinationURL12onCompletiony10Foundation0H0V_AJys5Error_pSg_AJSg13ZIPFoundation7ArchiveCSgtctF",
             "moduleName": "BBMediaKit",
             "declAttributes": [
               "Final",
@@ -675,96 +689,6 @@
             "moduleName": "BBMediaKit",
             "declAttributes": [
               "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "urlSession",
-            "printedName": "urlSession(_:downloadTask:didFinishDownloadingTo:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "usr": "c:objc(cs)NSURLSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSessionDownloadTask",
-                "printedName": "Foundation.URLSessionDownloadTask",
-                "usr": "c:objc(cs)NSURLSessionDownloadTask"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BBMediaKit@objc(cs)DownloadManager(im)URLSession:downloadTask:didFinishDownloadingToURL:",
-            "mangledName": "$s10BBMediaKit15DownloadManagerC10urlSession_12downloadTask22didFinishDownloadingToySo12NSURLSessionC_So0mcH0C10Foundation3URLVtF",
-            "moduleName": "BBMediaKit",
-            "objc_name": "URLSession:downloadTask:didFinishDownloadingToURL:",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "urlSession",
-            "printedName": "urlSession(_:task:didCompleteWithError:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "usr": "c:objc(cs)NSURLSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSessionTask",
-                "printedName": "Foundation.URLSessionTask",
-                "usr": "c:objc(cs)NSURLSessionTask"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any Swift.Error)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Error",
-                    "printedName": "any Swift.Error",
-                    "usr": "s:s5ErrorP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BBMediaKit@objc(cs)DownloadManager(im)URLSession:task:didCompleteWithError:",
-            "mangledName": "$s10BBMediaKit15DownloadManagerC10urlSession_4task20didCompleteWithErrorySo12NSURLSessionC_So0L4TaskCs0K0_pSgtF",
-            "moduleName": "BBMediaKit",
-            "objc_name": "URLSession:task:didCompleteWithError:",
-            "declAttributes": [
-              "Final",
-              "ObjC",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -908,13 +832,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@CM@BBMediaKit@objc(cs)DownloadManager(im)URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:",
+            "usr": "s:10BBMediaKit15DownloadManagerC10urlSession_12downloadTask12didWriteData17totalBytesWritten0lm10ExpectedToJ0ySo12NSURLSessionC_So0qcH0Cs5Int64VA2NtF",
             "mangledName": "$s10BBMediaKit15DownloadManagerC10urlSession_12downloadTask12didWriteData17totalBytesWritten0lm10ExpectedToJ0ySo12NSURLSessionC_So0qcH0Cs5Int64VA2NtF",
             "moduleName": "BBMediaKit",
-            "objc_name": "URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:",
             "declAttributes": [
               "Final",
-              "ObjC",
               "AccessControl"
             ],
             "isFromExtension": true,
@@ -5552,6 +5474,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZIPFoundation",
+        "printedName": "ZIPFoundation",
+        "declKind": "Import",
+        "moduleName": "BBMediaKit"
       },
       {
         "kind": "TypeDecl",
@@ -13663,42 +13592,42 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 419,
+      "offset": 550,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 905,
+      "offset": 1206,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1796,
+      "offset": 2024,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1840,
+      "offset": 2068,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1902,
+      "offset": 2130,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2204,
+      "offset": 2432,
       "length": 1,
       "value": "1"
     },
@@ -14449,7 +14378,7 @@
       "kind": "StringLiteral",
       "offset": 105,
       "length": 9,
-      "value": "\"1.0.127\""
+      "value": "\"1.0.129\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/CanvasView\/Legacy\/BBAugmentationRendererView.swift",
@@ -14979,86 +14908,93 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 643,
+      "offset": 664,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 746,
+      "offset": 767,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 800,
+      "offset": 821,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 913,
+      "offset": 934,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 1031,
+      "offset": 1052,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 1130,
+      "offset": 1151,
       "length": 4,
       "value": "8000"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 1314,
+      "offset": 1335,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 1230,
+      "offset": 1251,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 1388,
+      "offset": 1409,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 1483,
+      "offset": 1504,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "IntegerLiteral",
-      "offset": 1537,
+      "offset": 1558,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 6940,
+      "offset": 6961,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
+      "kind": "StringLiteral",
+      "offset": 16048,
+      "length": 5,
+      "value": "\"mp4\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/CanvasView\/BBCanvasRenderer\/BBCanvasRendererComponents\/BBCanvasRendererComponentBufferController.swift",
@@ -16148,28 +16084,28 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadOperation.swift",
       "kind": "IntegerLiteral",
-      "offset": 281,
+      "offset": 277,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadOperation.swift",
       "kind": "IntegerLiteral",
-      "offset": 304,
+      "offset": 300,
       "length": 8,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadOperation.swift",
       "kind": "StringLiteral",
-      "offset": 641,
+      "offset": 637,
       "length": 13,
       "value": "\"isExecuting\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/DownloadManager\/DownloadOperation.swift",
       "kind": "StringLiteral",
-      "offset": 696,
+      "offset": 692,
       "length": 12,
       "value": "\"isFinished\""
     }

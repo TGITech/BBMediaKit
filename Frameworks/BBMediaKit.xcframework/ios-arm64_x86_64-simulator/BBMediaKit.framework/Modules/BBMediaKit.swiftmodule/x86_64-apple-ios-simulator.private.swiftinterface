@@ -44,8 +44,9 @@ extension BBMediaKit.BBTimecode {
   }
   public func stringValue(format: BBMediaKit.BBTimecode.Format = .default) -> Swift.String
 }
-public typealias DownloadCompletionBlock = (_ error: (any Swift.Error)?, _ fileUrl: Foundation.URL?) -> Swift.Void
+public typealias DownloadCompletionBlock = (_ error: (any Swift.Error)?, _ fileUrl: Foundation.URL?, _ archive: ZIPFoundation.Archive?) -> Swift.Void
 public typealias BackgroundDownloadCompletionHandler = () -> Swift.Void
+public typealias DataTaskCompletionBlock = (_ data: Foundation.Data?, _ response: Foundation.URLResponse?, _ error: (any Swift.Error)?) -> Swift.Void
 @_hasMissingDesignatedInitializers public class DownloadItem : Swift.Codable {
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -54,22 +55,20 @@ public typealias BackgroundDownloadCompletionHandler = () -> Swift.Void
 public struct DownloadManagerConfig {
   public var maximumRetries: Swift.Int
 }
-@objc @_inheritsConvenienceInitializers final public class DownloadManager : ObjectiveC.NSObject, Foundation.URLSessionDelegate, Foundation.URLSessionDownloadDelegate, BBMediaKit.Loggable {
+@objc @_inheritsConvenienceInitializers final public class DownloadManager : ObjectiveC.NSObject, Foundation.URLSessionDelegate, BBMediaKit.Loggable {
   public static let shared: BBMediaKit.DownloadManager
   final public var configuration: BBMediaKit.DownloadManagerConfig
   final public var backgroundDownloadCompletionHandler: BBMediaKit.BackgroundDownloadCompletionHandler?
   final public func addDownload(url: Foundation.URL, destinationURL: Foundation.URL, onCompletion completionBlock: @escaping BBMediaKit.DownloadCompletionBlock)
   final public func cancelAllDownloads()
   final public func cancelDownload(withURL url: Foundation.URL)
-  @objc final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
-  @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
   @objc final public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
   @objc override dynamic public init()
   @objc deinit
 }
 extension BBMediaKit.DownloadManager : Foundation.URLSessionTaskDelegate {
-  @objc final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
 }
 extension BBMediaKit.DownloadManager {
   final public var downloads: [Foundation.URL] {
