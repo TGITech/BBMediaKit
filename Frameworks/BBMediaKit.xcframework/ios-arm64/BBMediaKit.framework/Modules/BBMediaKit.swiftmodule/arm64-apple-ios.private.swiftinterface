@@ -12,14 +12,17 @@ import CoreMedia
 import CoreText
 import CoreVideo
 import DatadogLogs
+import OpenGLES.ES2
 import Foundation
 import MachO
 import Metal
 import MetalKit
+import OpenGLES
 import QuartzCore
 import SocketIO
 import Swift
 import UIKit
+import UniformTypeIdentifiers
 import VideoToolbox
 import Vision
 import WebKit
@@ -54,12 +57,13 @@ public typealias DataTaskCompletionBlock = (_ data: Foundation.Data?, _ response
 }
 public struct DownloadManagerConfig {
   public var maximumRetries: Swift.Int
+  public var lastRetryOffsetMS: CoreFoundation.CGFloat
 }
 @objc @_inheritsConvenienceInitializers final public class DownloadManager : ObjectiveC.NSObject, Foundation.URLSessionDelegate, BBMediaKit.Loggable {
   public static let shared: BBMediaKit.DownloadManager
   final public var configuration: BBMediaKit.DownloadManagerConfig
   final public var backgroundDownloadCompletionHandler: BBMediaKit.BackgroundDownloadCompletionHandler?
-  final public func addDownload(url: Foundation.URL, destinationURL: Foundation.URL, onCompletion completionBlock: @escaping BBMediaKit.DownloadCompletionBlock)
+  final public func addDownload(url: Foundation.URL, destinationURL: Foundation.URL, timestamp: Foundation.TimeInterval, onCompletion completionBlock: @escaping BBMediaKit.DownloadCompletionBlock)
   final public func cancelAllDownloads()
   final public func cancelDownload(withURL url: Foundation.URL)
   @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
@@ -265,6 +269,10 @@ public enum BBToggleState : Swift.Int {
     set
   }
   public var isAugmentationLayerEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var allowRenderCPU: Swift.Bool {
     get
     set
   }
