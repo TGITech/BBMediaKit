@@ -396,14 +396,11 @@ public struct CanvasSize : Swift.Codable {
 public class Placeholder : Swift.Codable, Swift.Equatable {
   public static func == (lhs: BBMediaKit.Placeholder, rhs: BBMediaKit.Placeholder) -> Swift.Bool
   final public let corners: [BBMediaKit.Corner]
-  final public let height: Swift.Int
-  final public let maskX: Swift.Double, maskY: Swift.Double
   public var name: Swift.String
   final public let tranform: [Swift.Float]
-  final public let width: Swift.Int
   public var alphaChannel: [Swift.UInt8]
   public var image: UIKit.UIImage?
-  public init(corners: [BBMediaKit.Corner] = [Corner(x: 10, y: 10)], height: Swift.Int = 100, maskX: Swift.Double = 0.0, maskY: Swift.Double = 0.0, name: Swift.String = "Test", tranform: [Swift.Float] = [0,0,0,0,0,0,0,0,0], width: Swift.Int = 100, alphaChannel: [Swift.UInt8] = [0], image: UIKit.UIImage? = nil)
+  public init(corners: [BBMediaKit.Corner] = [Corner(x: 10, y: 10)], name: Swift.String = "Test", tranform: [Swift.Float] = [0,0,0,0,0,0,0,0,0], alphaChannel: [Swift.UInt8] = [0], image: UIKit.UIImage? = nil)
   public func makeImageWith(timecode: Swift.String?)
   public func applyAlpha(_ alpha: [Swift.UInt8])
   @objc deinit
