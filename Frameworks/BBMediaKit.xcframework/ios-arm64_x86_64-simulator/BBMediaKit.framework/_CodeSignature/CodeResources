@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VVCnJSnbSP4kFqHuUQH3MNFdUfs=
+		L3YoejSQ4JEWgBJoQI1jdwZec0M=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		+TO23N38KcuGnf9nOa945BuR90s=
+		6dafAlbezeIdCp+tHyqY22tWHIc=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EQTrKnv4dg4sedK65rCZKSNZu5U=
+		ymginNrM2PKMIxtt+ZImNViunpQ=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		+TO23N38KcuGnf9nOa945BuR90s=
+		6dafAlbezeIdCp+tHyqY22tWHIc=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6jXq0cvhw3xDsU4+qlSY2S/cj1o=
+		56WidRdhx2p6h4CneLXW/2KNh5g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -94,7 +94,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xocWqcln9wvp+nHQvd1E6ZQV0Az3GP4FIIZpV2DD2b8=
+			NUJOVyTsxitLFLJGC9TaOVkiXm9v76mwLteWcScjiUI=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -122,14 +122,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xA4Q4yx12GMppK7RX8N8J5SsYtIWzYHZ9lvoGejhGe4=
+			8ZfbSWudhxJzZgwtWZPxFsxgVgRadBJzvunMWvGU8nw=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xocWqcln9wvp+nHQvd1E6ZQV0Az3GP4FIIZpV2DD2b8=
+			NUJOVyTsxitLFLJGC9TaOVkiXm9v76mwLteWcScjiUI=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -157,7 +157,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			up9mQhHRjYJqGLFavJUT81Zh1bI4hroaxoh9T4npmpU=
+			8HNhFDr+9dSXHyPUGwYbRLMQzu8WpJHKQv1fsXVvVAk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
