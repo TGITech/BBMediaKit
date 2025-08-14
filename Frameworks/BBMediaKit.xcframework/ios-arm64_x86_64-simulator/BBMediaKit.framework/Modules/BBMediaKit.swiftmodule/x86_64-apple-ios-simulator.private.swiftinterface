@@ -272,6 +272,14 @@ public enum BBToggleState : Swift.Int {
     get
     set
   }
+  public var allowRenderVideoLayer: Swift.Bool {
+    get
+    set
+  }
+  public var allowRenderAugmentationLayer: Swift.Bool {
+    get
+    set
+  }
   public var allowRenderCPU: Swift.Bool {
     get
     set
