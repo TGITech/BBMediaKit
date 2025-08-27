@@ -4041,7 +4041,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(mkID:streamURL:fps:timecodesFolder:offsetList:isMP4:jsonID:videoResolution:)",
+            "printedName": "init(mkID:streamURL:fps:timecodesFolder:offsetList:isMP4:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4121,41 +4121,11 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "BBMediaKit.BBVideoResolution?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "BBVideoResolution",
-                    "printedName": "BBMediaKit.BBVideoResolution",
-                    "usr": "s:10BBMediaKit17BBVideoResolutionO"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10BBMediaKit22BBSessionConfigurationC4mkID9streamURL3fps15timecodesFolder10offsetList5isMP404jsonF015videoResolutionACSgSSSg_AmA11BBFpsOptionOSSSayAA8BBOffsetVGSbAmA07BBVideoR0OSgtcfc",
-            "mangledName": "$s10BBMediaKit22BBSessionConfigurationC4mkID9streamURL3fps15timecodesFolder10offsetList5isMP404jsonF015videoResolutionACSgSSSg_AmA11BBFpsOptionOSSSayAA8BBOffsetVGSbAmA07BBVideoR0OSgtcfc",
+            "usr": "s:10BBMediaKit22BBSessionConfigurationC4mkID9streamURL3fps15timecodesFolder10offsetList5isMP4ACSgSSSg_AkA11BBFpsOptionOSSSayAA8BBOffsetVGSbtcfc",
+            "mangledName": "$s10BBMediaKit22BBSessionConfigurationC4mkID9streamURL3fps15timecodesFolder10offsetList5isMP4ACSgSSSg_AkA11BBFpsOptionOSSSayAA8BBOffsetVGSbtcfc",
             "moduleName": "BBMediaKit",
             "declAttributes": [
               "AccessControl"
