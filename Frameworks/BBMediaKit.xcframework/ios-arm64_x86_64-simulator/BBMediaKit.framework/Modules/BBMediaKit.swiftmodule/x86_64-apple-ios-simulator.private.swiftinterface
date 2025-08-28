@@ -147,7 +147,7 @@ public enum BBFpsOption : Swift.Double {
   }
 }
 public class BBSessionConfiguration {
-  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true)
+  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true, jsonID: Swift.String? = nil, videoResolution: BBMediaKit.BBVideoResolution? = nil)
   @objc deinit
 }
 public enum BBVersion {
@@ -239,6 +239,7 @@ public struct BBImageAd {
 }
 public protocol BBMediaSessionErrorDelegate : AnyObject {
   func mediaSessionDidError(_ sender: BBMediaKit.BBMediaSession, error: any Swift.Error)
+  func mediaSessionDidFailOnError(_ sender: BBMediaKit.BBMediaSession, error: any Swift.Error)
 }
 public protocol BBMediaSessionDelegate : BBMediaKit.BBMediaSessionErrorDelegate {
   func mediaSession(_ sender: BBMediaKit.BBMediaSession, didUpdateGlobalAugmentationState isGlobalAugmentationEnabled: Swift.Bool)
@@ -362,6 +363,7 @@ public enum BBToggleState : Swift.Int {
   public func handleAdFinished()
   public func handleAdBreakStarted()
   public func handleAdBreakEnd()
+  public func handleEndGameTimestamp(timestamp: Swift.Int64)
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegate {
   @objc dynamic public func outputMediaDataWillChange(_ sender: AVFoundation.AVPlayerItemOutput)
