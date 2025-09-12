@@ -59,22 +59,23 @@ public struct DownloadManagerConfig {
   public var maximumRetries: Swift.Int
   public var lastRetryOffsetMS: CoreFoundation.CGFloat
 }
-@objc @_inheritsConvenienceInitializers final public class DownloadManager : ObjectiveC.NSObject, Foundation.URLSessionDelegate, BBMediaKit.Loggable {
-  public static let shared: BBMediaKit.DownloadManager
+@objc final public class BBDownloadManager : ObjectiveC.NSObject, Foundation.URLSessionDelegate, BBMediaKit.Loggable {
+  final public var analyticsHandler: any BBMediaKit.BBLoggerProtocol
   final public var configuration: BBMediaKit.DownloadManagerConfig
   final public var backgroundDownloadCompletionHandler: BBMediaKit.BackgroundDownloadCompletionHandler?
+  public init(with logger: any BBMediaKit.BBLoggerProtocol)
+  @objc deinit
   final public func addDownload(url: Foundation.URL, destinationURL: Foundation.URL, timestamp: Foundation.TimeInterval, onCompletion completionBlock: @escaping BBMediaKit.DownloadCompletionBlock)
   final public func cancelAllDownloads()
   final public func cancelDownload(withURL url: Foundation.URL)
+  final public func destroy()
   @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
   @objc final public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
-  @objc override dynamic public init()
-  @objc deinit
 }
-extension BBMediaKit.DownloadManager : Foundation.URLSessionTaskDelegate {
+extension BBMediaKit.BBDownloadManager : Foundation.URLSessionTaskDelegate {
   final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
 }
-extension BBMediaKit.DownloadManager {
+extension BBMediaKit.BBDownloadManager {
   final public var downloads: [Foundation.URL] {
     get
   }
@@ -147,7 +148,7 @@ public enum BBFpsOption : Swift.Double {
   }
 }
 public class BBSessionConfiguration {
-  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true, jsonID: Swift.String? = nil, videoResolution: BBMediaKit.BBVideoResolution? = nil)
+  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true, jsonID: Swift.String? = nil, videoResolution: BBMediaKit.BBVideoResolution? = nil, isProduction: Swift.Bool = true)
   @objc deinit
 }
 public enum BBVersion {
@@ -196,7 +197,7 @@ extension BBMediaKit.BBTimecode {
 }
 public typealias AdUpdatedBlock = (_ advertising: BBMediaKit.BBImageAd) -> Swift.Void
 final public class BBAdsManager : BBMediaKit.Loggable {
-  public static let shared: BBMediaKit.BBAdsManager
+  final public var analyticsHandler: any BBMediaKit.BBLoggerProtocol
   final public var adsURLString: Swift.String?
   final public var adsLoaded: Swift.Bool
   final public var currentAdItem: BBMediaKit.BBImageAd? {
@@ -205,15 +206,16 @@ final public class BBAdsManager : BBMediaKit.Loggable {
   }
   final public var adDidUpdate: BBMediaKit.AdUpdatedBlock?
   final public var ads: [Swift.String : BBMediaKit.BBImageAd]
-  public init()
+  public init(with logger: any BBMediaKit.BBLoggerProtocol)
+  @objc deinit
   final public func connectToAdsListener()
   final public func disconnectAdsListener()
-  @objc deinit
 }
 extension BBMediaKit.BBAdsManager {
   final public func reloadAds()
 }
 @objc @_hasMissingDesignatedInitializers final public class BBMetadataWorker : ObjectiveC.NSObject, BBMediaKit.Loggable {
+  final public var analyticsHandler: any BBMediaKit.BBLoggerProtocol
   final public var didRestartLoading: (() -> Swift.Void)?
   @objc deinit
   final public func readMetadata(forKey key: Swift.String) -> BBMediaKit.BBMetadata?
@@ -344,6 +346,7 @@ public enum BBToggleState : Swift.Int {
     set
   }
   public var allowRenderClosedCaptions: Swift.Bool
+  public var analyticsHandler: any BBMediaKit.BBLoggerProtocol
   public var debugTexture: (any Metal.MTLTexture)? {
     get
     set
@@ -462,7 +465,12 @@ public struct SourceFormat : Swift.Codable {
 @_hasMissingDesignatedInitializers public class TrackingInfo {
   @objc deinit
 }
+public protocol BBLoggerProtocol {
+  var logger: any DatadogLogs.LoggerProtocol { get }
+  var metrics: BBMediaKit.TrackingInfo { get }
+}
 public protocol Loggable {
+  var analyticsHandler: any BBMediaKit.BBLoggerProtocol { get }
   var logger: any DatadogLogs.LoggerProtocol { get }
   var metrics: BBMediaKit.TrackingInfo { get }
   func logError(_ message: Swift.String, error: (any Swift.Error)?, attributes: [Swift.String : any Swift.Encodable]?)
@@ -475,6 +483,16 @@ extension BBMediaKit.Loggable where Self : AnyObject {
   public var metrics: BBMediaKit.TrackingInfo {
     get
   }
+  public func logError(_ message: Swift.String, error: (any Swift.Error)? = nil, attributes: [Swift.String : any Swift.Encodable]? = nil)
+  public func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
+}
+@_hasMissingDesignatedInitializers public class BBLogger : BBMediaKit.BBLoggerProtocol {
+  weak public var session: BBMediaKit.BBMediaSession?
+  weak public var errorDelegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?
+  public var logger: any DatadogLogs.LoggerProtocol
+  public var metrics: BBMediaKit.TrackingInfo
+  @objc deinit
+  public func stopTimer()
   public func logError(_ message: Swift.String, error: (any Swift.Error)? = nil, attributes: [Swift.String : any Swift.Encodable]? = nil)
   public func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
 }
