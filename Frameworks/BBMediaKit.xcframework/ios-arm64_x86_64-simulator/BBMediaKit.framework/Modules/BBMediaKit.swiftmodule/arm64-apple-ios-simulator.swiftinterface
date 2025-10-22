@@ -114,6 +114,27 @@ public enum BBVideoResolution : Swift.String, Swift.Hashable, Swift.Codable {
     get
   }
 }
+public enum BBEnvironment : Swift.String, Swift.Hashable, Swift.Codable, Swift.CaseIterable {
+  case prod
+  case dev
+  public var title: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [BBMediaKit.BBEnvironment]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [BBMediaKit.BBEnvironment] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension BBMediaKit.BBEnvironment : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
 extension BBMediaKit.BBTimecode {
   public struct Components {
   }
@@ -148,7 +169,7 @@ public enum BBFpsOption : Swift.Double {
   }
 }
 public class BBSessionConfiguration {
-  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true, jsonID: Swift.String? = nil, videoResolution: BBMediaKit.BBVideoResolution? = nil, isProduction: Swift.Bool = true)
+  public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true, jsonID: Swift.String? = nil, videoResolution: BBMediaKit.BBVideoResolution? = nil, environment: BBMediaKit.BBEnvironment = .prod)
   @objc deinit
 }
 public enum BBVersion {
@@ -345,7 +366,11 @@ public enum BBToggleState : Swift.Int {
     get
     set
   }
-  public var allowRenderClosedCaptions: Swift.Bool
+  public var allowRenderClosedCaptions: Swift.Bool {
+    get
+    set
+  }
+  public var environment: BBMediaKit.BBEnvironment
   public var analyticsHandler: any BBMediaKit.BBLoggerProtocol
   public var debugTexture: (any Metal.MTLTexture)? {
     get
@@ -505,6 +530,7 @@ extension BBMediaKit.BBTimecode {
 extension BBMediaKit.BBTimecode.Format : Swift.Equatable {}
 extension BBMediaKit.BBTimecode.Format : Swift.Hashable {}
 extension BBMediaKit.BBVideoResolution : Swift.RawRepresentable {}
+extension BBMediaKit.BBEnvironment : Swift.RawRepresentable {}
 extension BBMediaKit.BBFpsOption : Swift.Equatable {}
 extension BBMediaKit.BBFpsOption : Swift.Hashable {}
 extension BBMediaKit.BBFpsOption : Swift.RawRepresentable {}
