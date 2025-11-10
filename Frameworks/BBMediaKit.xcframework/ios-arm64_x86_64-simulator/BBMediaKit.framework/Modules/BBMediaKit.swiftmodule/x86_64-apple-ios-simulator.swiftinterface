@@ -172,6 +172,28 @@ public class BBSessionConfiguration {
   public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true, jsonID: Swift.String? = nil, videoResolution: BBMediaKit.BBVideoResolution? = nil, environment: BBMediaKit.BBEnvironment = .prod)
   @objc deinit
 }
+public enum BBSecurityError : Swift.Error {
+  case networkError(error: any Swift.Error)
+  case invalidResponse(statusCode: Swift.Int)
+  case decodingError
+  case missingData
+  case invalidURL
+  case configFetchFailed(error: any Swift.Error)
+  case missingToken
+  case invalidResponseDescription(description: Swift.String)
+}
+extension BBMediaKit.BBSecurityError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class BBSecurityProvider {
+  public static func handleAccessToken(token: Swift.String, completion: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  final public func testFlow(gameID: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  final public func getCloudfrontCookies(gameId: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  final public func getFakeCloudfrontCookies(gameId: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
 public enum BBVersion {
   public static let value: Swift.String
 }
@@ -241,6 +263,7 @@ extension BBMediaKit.BBAdsManager {
   @objc deinit
   final public func readMetadata(forKey key: Swift.String) -> BBMediaKit.BBMetadata?
   final public func deleteMetadata(forKey key: Swift.String)
+  final public func prepareSecureAccess()
   final public func shouldStartAugmentation() -> Swift.Bool
   final public func isReadyForAugmentation() -> Swift.Bool
   final public func removeAllAds()

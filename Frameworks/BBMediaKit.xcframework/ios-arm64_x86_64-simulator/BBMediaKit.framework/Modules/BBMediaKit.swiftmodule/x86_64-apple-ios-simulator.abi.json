@@ -4759,6 +4759,778 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BBMediaKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BBSecurityError",
+        "printedName": "BBSecurityError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "networkError",
+            "printedName": "networkError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BBMediaKit.BBSecurityError.Type) -> (any Swift.Error) -> BBMediaKit.BBSecurityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> BBMediaKit.BBSecurityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(error: any Swift.Error)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BBMediaKit.BBSecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO07networkD0yACs0D0_p_tcACmF",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO07networkD0yACs0D0_p_tcACmF",
+            "moduleName": "BBMediaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidResponse",
+            "printedName": "invalidResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BBMediaKit.BBSecurityError.Type) -> (Swift.Int) -> BBMediaKit.BBSecurityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> BBMediaKit.BBSecurityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(statusCode: Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BBMediaKit.BBSecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO15invalidResponseyACSi_tcACmF",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO15invalidResponseyACSi_tcACmF",
+            "moduleName": "BBMediaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "decodingError",
+            "printedName": "decodingError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BBMediaKit.BBSecurityError.Type) -> BBMediaKit.BBSecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BBSecurityError",
+                    "printedName": "BBMediaKit.BBSecurityError",
+                    "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BBMediaKit.BBSecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO08decodingD0yA2CmF",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO08decodingD0yA2CmF",
+            "moduleName": "BBMediaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "missingData",
+            "printedName": "missingData",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BBMediaKit.BBSecurityError.Type) -> BBMediaKit.BBSecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BBSecurityError",
+                    "printedName": "BBMediaKit.BBSecurityError",
+                    "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BBMediaKit.BBSecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO11missingDatayA2CmF",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO11missingDatayA2CmF",
+            "moduleName": "BBMediaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidURL",
+            "printedName": "invalidURL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BBMediaKit.BBSecurityError.Type) -> BBMediaKit.BBSecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BBSecurityError",
+                    "printedName": "BBMediaKit.BBSecurityError",
+                    "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BBMediaKit.BBSecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO10invalidURLyA2CmF",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO10invalidURLyA2CmF",
+            "moduleName": "BBMediaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "configFetchFailed",
+            "printedName": "configFetchFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BBMediaKit.BBSecurityError.Type) -> (any Swift.Error) -> BBMediaKit.BBSecurityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> BBMediaKit.BBSecurityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(error: any Swift.Error)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BBMediaKit.BBSecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO17configFetchFailedyACs0D0_p_tcACmF",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO17configFetchFailedyACs0D0_p_tcACmF",
+            "moduleName": "BBMediaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "missingToken",
+            "printedName": "missingToken",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BBMediaKit.BBSecurityError.Type) -> BBMediaKit.BBSecurityError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BBSecurityError",
+                    "printedName": "BBMediaKit.BBSecurityError",
+                    "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BBMediaKit.BBSecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO12missingTokenyA2CmF",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO12missingTokenyA2CmF",
+            "moduleName": "BBMediaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidResponseDescription",
+            "printedName": "invalidResponseDescription",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BBMediaKit.BBSecurityError.Type) -> (Swift.String) -> BBMediaKit.BBSecurityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> BBMediaKit.BBSecurityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(description: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BBMediaKit.BBSecurityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BBSecurityError",
+                        "printedName": "BBMediaKit.BBSecurityError",
+                        "usr": "s:10BBMediaKit15BBSecurityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO26invalidResponseDescriptionyACSS_tcACmF",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO26invalidResponseDescriptionyACSS_tcACmF",
+            "moduleName": "BBMediaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10BBMediaKit15BBSecurityErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s10BBMediaKit15BBSecurityErrorO16errorDescriptionSSSgvp",
+            "moduleName": "BBMediaKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10BBMediaKit15BBSecurityErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s10BBMediaKit15BBSecurityErrorO16errorDescriptionSSSgvg",
+                "moduleName": "BBMediaKit",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10BBMediaKit15BBSecurityErrorO",
+        "mangledName": "$s10BBMediaKit15BBSecurityErrorO",
+        "moduleName": "BBMediaKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BBSecurityProvider",
+        "printedName": "BBSecurityProvider",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "handleAccessToken",
+            "printedName": "handleAccessToken(token:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<(), any Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(), any Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10BBMediaKit18BBSecurityProviderC17handleAccessToken5token10completionySS_ys6ResultOyyts5Error_pGcSgtFZ",
+            "mangledName": "$s10BBMediaKit18BBSecurityProviderC17handleAccessToken5token10completionySS_ys6ResultOyyts5Error_pGcSgtFZ",
+            "moduleName": "BBMediaKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "testFlow",
+            "printedName": "testFlow(gameID:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10BBMediaKit18BBSecurityProviderC8testFlow6gameID10completionySS_ys6ResultOyyts5Error_pGctF",
+            "mangledName": "$s10BBMediaKit18BBSecurityProviderC8testFlow6gameID10completionySS_ys6ResultOyyts5Error_pGctF",
+            "moduleName": "BBMediaKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCloudfrontCookies",
+            "printedName": "getCloudfrontCookies(gameId:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10BBMediaKit18BBSecurityProviderC20getCloudfrontCookies6gameId10completionySS_ys6ResultOyyts5Error_pGctF",
+            "mangledName": "$s10BBMediaKit18BBSecurityProviderC20getCloudfrontCookies6gameId10completionySS_ys6ResultOyyts5Error_pGctF",
+            "moduleName": "BBMediaKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getFakeCloudfrontCookies",
+            "printedName": "getFakeCloudfrontCookies(gameId:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10BBMediaKit18BBSecurityProviderC24getFakeCloudfrontCookies6gameId10completionySS_ys6ResultOyyts5Error_pGctF",
+            "mangledName": "$s10BBMediaKit18BBSecurityProviderC24getFakeCloudfrontCookies6gameId10completionySS_ys6ResultOyyts5Error_pGctF",
+            "moduleName": "BBMediaKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10BBMediaKit18BBSecurityProviderC",
+        "mangledName": "$s10BBMediaKit18BBSecurityProviderC",
+        "moduleName": "BBMediaKit",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "simd",
         "printedName": "simd",
         "declKind": "Import",
@@ -7223,6 +7995,27 @@
             "declKind": "Func",
             "usr": "s:10BBMediaKit16BBMetadataWorkerC14deleteMetadata6forKeyySS_tF",
             "mangledName": "$s10BBMediaKit16BBMetadataWorkerC14deleteMetadata6forKeyySS_tF",
+            "moduleName": "BBMediaKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prepareSecureAccess",
+            "printedName": "prepareSecureAccess()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10BBMediaKit16BBMetadataWorkerC19prepareSecureAccessyyF",
+            "mangledName": "$s10BBMediaKit16BBMetadataWorkerC19prepareSecureAccessyyF",
             "moduleName": "BBMediaKit",
             "declAttributes": [
               "Final",
@@ -17291,7 +18084,7 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/AugmentationService\/BBAugmentationMetadataDownloadOperation.swift",
       "kind": "StringLiteral",
-      "offset": 268,
+      "offset": 289,
       "length": 38,
       "value": "\"https:\/\/db8igqxlbvayn.cloudfront.net\""
     },
@@ -17375,7 +18168,7 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/AugmentationService\/BBAugmentationOperation.swift",
       "kind": "BooleanLiteral",
-      "offset": 701,
+      "offset": 722,
       "length": 4,
       "value": "true"
     },
@@ -17506,6 +18299,34 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Security\/SecurityProvider\/BBSecurityProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 1458,
+      "length": 32,
+      "value": "\"BBSecurityProvider.accessToken\""
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Security\/SecurityProvider\/BBSecurityProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 1520,
+      "length": 28,
+      "value": "\"BBSecurityProvider.idToken\""
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Security\/SecurityProvider\/BBSecurityProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 1583,
+      "length": 33,
+      "value": "\"BBSecurityProvider.refreshToken\""
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/Security\/SecurityProvider\/BBSecurityProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2004,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/AugmentationService\/BBAugmentationGameIDFetcher.swift",
       "kind": "StringLiteral",
       "offset": 500,
@@ -17517,7 +18338,7 @@
       "kind": "StringLiteral",
       "offset": 105,
       "length": 9,
-      "value": "\"1.0.182\""
+      "value": "\"1.0.183\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/CanvasView\/BBCanvasRenderer\/BBCanvasRendererComponents\/BBCanvasRendererPool\/BBCanvasRendererResultPool.swift",
@@ -18151,22 +18972,29 @@
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
-      "kind": "StringLiteral",
-      "offset": 3732,
-      "length": 49,
-      "value": "\"com.bbsdk.bbmetadataworker.resourceLoader.queue\""
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "BooleanLiteral",
-      "offset": 8870,
+      "offset": 3764,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
       "kind": "StringLiteral",
-      "offset": 20505,
+      "offset": 3834,
+      "length": 49,
+      "value": "\"com.bbsdk.bbmetadataworker.resourceLoader.queue\""
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9645,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/MetadataManager\/BBMetadataWorker.swift",
+      "kind": "StringLiteral",
+      "offset": 21360,
       "length": 5,
       "value": "\"mp4\""
     },
@@ -18612,28 +19440,28 @@
       "value": "[0, 3, 2, 0, 2, 1]"
     },
     {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/BBPaddingLabel.swift",
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/BBPaddingLabel.swift",
       "kind": "IntegerLiteral",
       "offset": 173,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/BBPaddingLabel.swift",
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/BBPaddingLabel.swift",
       "kind": "IntegerLiteral",
       "offset": 206,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/BBPaddingLabel.swift",
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/BBPaddingLabel.swift",
       "kind": "IntegerLiteral",
       "offset": 237,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/BBPaddingLabel.swift",
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/BBPaddingLabel.swift",
       "kind": "IntegerLiteral",
       "offset": 269,
       "length": 1,
@@ -18712,336 +19540,343 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 3960,
+      "offset": 3457,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 4697,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5027,
+      "offset": 3964,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 5253,
+      "offset": 4701,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5031,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 5604,
+      "offset": 5257,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 5953,
+      "offset": 5608,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5957,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 6281,
+      "offset": 6285,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 6615,
+      "offset": 6619,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 6853,
+      "offset": 6857,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 7084,
+      "offset": 7088,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 7306,
+      "offset": 7310,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 7529,
+      "offset": 7533,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 7759,
+      "offset": 7763,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 7996,
+      "offset": 8000,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 8253,
+      "offset": 8257,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 8518,
+      "offset": 8522,
       "length": 30,
       "value": "\"Allow Render Closed Captions\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 8470,
+      "offset": 8474,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 8874,
+      "offset": 8878,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 9667,
+      "offset": 9671,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 9730,
+      "offset": 9734,
       "length": 33,
       "value": "\"com.bb.mediasession.videoOutput\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 9847,
+      "offset": 9851,
       "length": 36,
       "value": "\"com.bb.mediasession.metadataOutput\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 9966,
+      "offset": 9970,
       "length": 35,
       "value": "\"com.bb.mediasession.legibleOutput\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 10209,
+      "offset": 10213,
       "length": 17,
       "value": "\"didChangeOffset\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 10241,
+      "offset": 10245,
       "length": 8,
       "value": "\"offset\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 10308,
+      "offset": 10312,
       "length": 13,
       "value": "\"last_offset\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 10164,
+      "offset": 10168,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 11327,
+      "offset": 11331,
       "length": 33,
       "value": "\"BBMediaSession.adFileName.queue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 12685,
+      "offset": 12689,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 12751,
+      "offset": 12755,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 13550,
+      "offset": 13554,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 13587,
+      "offset": 13591,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 13624,
+      "offset": 13628,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 13841,
+      "offset": 13845,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 13883,
+      "offset": 13887,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 13920,
+      "offset": 13924,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "FloatLiteral",
-      "offset": 14230,
+      "offset": 14234,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 14562,
+      "offset": 14566,
       "length": 11,
       "value": "\"com.bbsdk\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 14585,
+      "offset": 14589,
       "length": 16,
       "value": "\"BBMediaSession\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 14750,
+      "offset": 14754,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 15126,
+      "offset": 15130,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 16175,
+      "offset": 16179,
       "length": 46,
       "value": "\"BBMediaSession.currentPlayheadTimecode.queue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 16834,
+      "offset": 16838,
       "length": 3,
       "value": "250"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 31862,
+      "offset": 31866,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "StringLiteral",
-      "offset": 31922,
+      "offset": 31926,
       "length": 27,
       "value": "\"bbmediakit.mediaDataQueue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 32079,
+      "offset": 32083,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 39712,
+      "offset": 39716,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "FloatLiteral",
-      "offset": 40801,
+      "offset": 40805,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBMediaSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 41056,
+      "offset": 41060,
       "length": 1,
       "value": "0"
     },
