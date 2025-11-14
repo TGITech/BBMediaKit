@@ -189,9 +189,7 @@ extension BBMediaKit.BBSecurityError : Foundation.LocalizedError {
 }
 @_hasMissingDesignatedInitializers final public class BBSecurityProvider {
   public static func handleAccessToken(token: Swift.String, completion: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
-  final public func testFlow(gameID: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   final public func getCloudfrontCookies(gameId: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
-  final public func getFakeCloudfrontCookies(gameId: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   @objc deinit
 }
 public enum BBVersion {
