@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BBMediaKit
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import AVFoundation
 import AVKit
 import Accelerate
@@ -82,7 +82,9 @@ extension BBMediaKit.BBDownloadManager {
   final public var downloadsItems: [BBMediaKit.DownloadItem] {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func downloadItem(withURL url: Foundation.URL) -> BBMediaKit.DownloadItem?
+  #endif
   final public func deleteDownloadItem(_ downloadItem: BBMediaKit.DownloadItem)
   final public func deleteDownload(url: Foundation.URL)
   final public func deleteAllDowndloads()
@@ -108,7 +110,9 @@ public enum BBVideoResolution : Swift.String, Swift.Hashable, Swift.Codable {
   public var bitrate: Swift.UInt {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -120,7 +124,9 @@ public enum BBEnvironment : Swift.String, Swift.Hashable, Swift.Codable, Swift.C
   public var title: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias AllCases = [BBMediaKit.BBEnvironment]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [BBMediaKit.BBEnvironment] {
@@ -157,19 +163,25 @@ public struct BBMetadataItem {
   public let frames: Swift.Int64
   public let timecode: BBMediaKit.BBTimecode
   public let timecodeString: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(avMetadataItem: AVFoundation.AVMetadataItem, frameRate: Swift.Double)
+  #endif
 }
 public enum BBFpsOption : Swift.Double {
   case fps59
   case fps29
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Double)
+  #endif
   public typealias RawValue = Swift.Double
   public var rawValue: Swift.Double {
     get
   }
 }
 public class BBSessionConfiguration {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(mkID: Swift.String? = nil, streamURL: Swift.String? = nil, fps: BBMediaKit.BBFpsOption, timecodesFolder: Swift.String = "", offsetList: [BBMediaKit.BBOffset] = [], isMP4: Swift.Bool = true, jsonID: Swift.String? = nil, videoResolution: BBMediaKit.BBVideoResolution? = nil, environment: BBMediaKit.BBEnvironment = .prod)
+  #endif
   @objc deinit
 }
 public enum BBSecurityError : Swift.Error {
@@ -183,13 +195,19 @@ public enum BBSecurityError : Swift.Error {
   case invalidResponseDescription(description: Swift.String)
 }
 extension BBMediaKit.BBSecurityError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
 }
 @_hasMissingDesignatedInitializers final public class BBSecurityProvider {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func handleAccessToken(token: Swift.String, completion: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func getCloudfrontCookies(gameId: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  #endif
   @objc deinit
 }
 public enum BBVersion {
@@ -225,7 +243,9 @@ public enum BBPScalingMode : Swift.Int {
   public var videoGravity: AVFoundation.AVLayerVideoGravity {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -246,6 +266,7 @@ final public class BBAdsManager : BBMediaKit.Loggable {
     set
   }
   final public var adDidUpdate: BBMediaKit.AdUpdatedBlock?
+  final public var priorityRedirectURL: Foundation.URL?
   final public var ads: [Swift.String : BBMediaKit.BBImageAd]
   public init(with logger: any BBMediaKit.BBLoggerProtocol)
   @objc deinit
@@ -259,7 +280,9 @@ extension BBMediaKit.BBAdsManager {
   final public var analyticsHandler: any BBMediaKit.BBLoggerProtocol
   final public var didRestartLoading: (() -> Swift.Void)?
   @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func readMetadata(forKey key: Swift.String) -> BBMediaKit.BBMetadata?
+  #endif
   final public func deleteMetadata(forKey key: Swift.String)
   final public func prepareSecureAccess()
   final public func shouldStartAugmentation() -> Swift.Bool
@@ -297,7 +320,9 @@ public enum BBGlobalAugmentationState : Swift.Int {
   case disabled
   case enabled
   public init(boolValue: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -308,7 +333,9 @@ public enum BBToggleState : Swift.Int {
   case disabled
   case enabled
   public init(boolValue: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -397,9 +424,13 @@ public enum BBToggleState : Swift.Int {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(playerLayer: QuartzCore.CALayer? = nil, player: AVFoundation.AVPlayer? = nil, configuration: BBMediaKit.BBSessionConfiguration)
+  #endif
   @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  #endif
   public func toggle(isEnabled: Swift.Bool)
   public func begin()
   public func end()
@@ -419,7 +450,9 @@ extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegat
   @objc dynamic public func outputSequenceWasFlushed(_ output: AVFoundation.AVPlayerItemOutput)
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
+  #endif
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemLegibleOutputPushDelegate {
   @objc dynamic public func legibleOutput(_ output: AVFoundation.AVPlayerItemLegibleOutput, didOutputAttributedStrings strings: [Foundation.NSAttributedString], nativeSampleBuffers: [Any], forItemTime itemTime: CoreMedia.CMTime)
@@ -450,7 +483,9 @@ public enum BBTimecodeFrameRate : Swift.String, Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -465,9 +500,11 @@ public class BBMetadata : Swift.Codable {
   final public let timecode: Swift.String
   public var maskPixelBuffer: CoreVideo.CVPixelBuffer?
   public var isLive: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public var placeholders: [BBMediaKit.Placeholder]? {
     get
   }
+  #endif
   public init(canvasSize: BBMediaKit.CanvasSize = CanvasSize(height: 0, width: 0), placeholders: [Swift.String : BBMediaKit.Placeholder], processingHeight: Swift.Int = 100, processingWidth: Swift.Int = 100, sourceFormat: BBMediaKit.SourceFormat = SourceFormat(fps: 29.98, height: 100, interlaced: false, width: 200), timecode: Swift.String, isLive: Swift.Bool = false)
   required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
@@ -486,8 +523,12 @@ public class Placeholder : Swift.Codable, Swift.Equatable {
   final public let tranform: [Swift.Float]
   public var alphaChannel: [Swift.UInt8]
   public var image: UIKit.UIImage?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(corners: [BBMediaKit.Corner] = [Corner(x: 10, y: 10)], name: Swift.String = "Test", tranform: [Swift.Float] = [0,0,0,0,0,0,0,0,0], alphaChannel: [Swift.UInt8] = [0], image: UIKit.UIImage? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func makeImageWith(timecode: Swift.String?)
+  #endif
   public func applyAlpha(_ alpha: [Swift.UInt8])
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -519,8 +560,12 @@ public protocol Loggable {
   var analyticsHandler: any BBMediaKit.BBLoggerProtocol { get }
   var logger: any DatadogLogs.LoggerProtocol { get }
   var metrics: BBMediaKit.TrackingInfo { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   func logError(_ message: Swift.String, error: (any Swift.Error)?, attributes: [Swift.String : any Swift.Encodable]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
+  #endif
 }
 extension BBMediaKit.Loggable where Self : AnyObject {
   public var logger: any DatadogLogs.LoggerProtocol {
@@ -529,8 +574,12 @@ extension BBMediaKit.Loggable where Self : AnyObject {
   public var metrics: BBMediaKit.TrackingInfo {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public func logError(_ message: Swift.String, error: (any Swift.Error)? = nil, attributes: [Swift.String : any Swift.Encodable]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
+  #endif
 }
 @_hasMissingDesignatedInitializers public class BBLogger : BBMediaKit.BBLoggerProtocol {
   weak public var session: BBMediaKit.BBMediaSession?
@@ -539,8 +588,12 @@ extension BBMediaKit.Loggable where Self : AnyObject {
   public var metrics: BBMediaKit.TrackingInfo
   @objc deinit
   public func stopTimer()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func logError(_ message: Swift.String, error: (any Swift.Error)? = nil, attributes: [Swift.String : any Swift.Encodable]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setLoggerErrorDelegate(_ delegate: (any BBMediaKit.BBMediaSessionErrorDelegate)?, for session: BBMediaKit.BBMediaSession)
+  #endif
 }
 extension BBMediaKit.BBTimecode {
   public struct FrameCount {
