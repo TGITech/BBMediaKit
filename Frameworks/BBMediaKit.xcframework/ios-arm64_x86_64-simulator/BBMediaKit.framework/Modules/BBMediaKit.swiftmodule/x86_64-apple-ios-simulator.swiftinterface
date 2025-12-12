@@ -319,6 +319,7 @@ public enum BBGlobalAugmentationState : Swift.Int {
   case uninitialized
   case disabled
   case enabled
+  case failed
   public init(boolValue: Swift.Bool)
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
@@ -443,6 +444,7 @@ public enum BBToggleState : Swift.Int {
   public func handleAdFinished()
   public func handleAdBreakStarted()
   public func handleAdBreakEnd()
+  public func handleExternalTapGestureAt(_ point: CoreFoundation.CGPoint)
   public func handleEndGameTimestamp(timestamp: Swift.Int64)
 }
 extension BBMediaKit.BBMediaSession : AVFoundation.AVPlayerItemOutputPullDelegate {
