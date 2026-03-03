@@ -17,6 +17,7 @@ import MachO
 import Metal
 import MetalKit
 import QuartzCore
+import Security
 import SocketIO
 import Swift
 import UIKit

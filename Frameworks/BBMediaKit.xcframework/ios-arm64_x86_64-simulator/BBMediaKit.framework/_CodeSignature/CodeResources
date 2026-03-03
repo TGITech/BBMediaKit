@@ -10,15 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		pHVtKEXoF6kBW/h1DjLxnJOMIL4=
+		JhZ8bJUzaliJ5DK5zvhwjP/g3lI=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		VIahDKkcVY2dqLovWBGNo6Mchq8=
+		6EsVxO8+1ivEnKM9L96KStTChYU=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		9XknhaQufOVGFHKn6qz/u/F6iOU=
+		+5S9QBZvAmdCRr1ZoXXL5b+Sicg=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		9XknhaQufOVGFHKn6qz/u/F6iOU=
+		+5S9QBZvAmdCRr1ZoXXL5b+Sicg=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aqEaGe59QAa+mpLPFyLgVC77nlU=
+		pA3gz7qMyoUugNxxuLJdUVpzs3g=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		VIahDKkcVY2dqLovWBGNo6Mchq8=
+		6EsVxO8+1ivEnKM9L96KStTChYU=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		qk9jn+tdwuiXasvjCu3DpxPsf3s=
+		qbnByxRJjfUU8dhAPaasP3yxTSA=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qk9jn+tdwuiXasvjCu3DpxPsf3s=
+		qbnByxRJjfUU8dhAPaasP3yxTSA=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/nkDyfA/rhmLqGPuuC+G1m2V830=
+		tp8F58G7kCXZmNi+ipihpcaLuHI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		I+jAN73nEmrm0YgZSjDNAOtUBVQ=
+		iHQAhEad4+YxoteJvamY4NHytDE=
 		</data>
 		<key>demo.alpha</key>
 		<data>
@@ -86,14 +86,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JLu/Oe2QspMar0YYimEBySEqJuCr/rUOxlkhwneMtsc=
+			AvjPsqYnBgbMa3pVRFDz28vTBIokl9oLuBs9sJc/K+4=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Wwt4GuKkYc4pvkpXHVR7lPaKSG3vHvpSNf5MKIHwf0=
+			5JroKlpa9lwXMD8lwZQK2hhDDZh4VH2Brt2cwApy1r4=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -107,28 +107,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Wwt4GuKkYc4pvkpXHVR7lPaKSG3vHvpSNf5MKIHwf0=
+			5JroKlpa9lwXMD8lwZQK2hhDDZh4VH2Brt2cwApy1r4=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lAUavMhbyYjUDhebZ2zvKCQ3l3twn0P4xhqNN7ZCDJ4=
+			2c12/n7pQ/YZ0Wb3fwGQwIBlBjopoWKq3I2RgkXdU08=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JLu/Oe2QspMar0YYimEBySEqJuCr/rUOxlkhwneMtsc=
+			AvjPsqYnBgbMa3pVRFDz28vTBIokl9oLuBs9sJc/K+4=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6lhjfOhF1BPsRtnQIUdnFhHvDeihqykYZAJdenaF/7U=
+			dvLB+E/8716wvQjG8Tc8+MpgJSB5MEY0Hw3Fm26+908=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -142,14 +142,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6lhjfOhF1BPsRtnQIUdnFhHvDeihqykYZAJdenaF/7U=
+			dvLB+E/8716wvQjG8Tc8+MpgJSB5MEY0Hw3Fm26+908=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wHQTWCvRJ6Q6l0EEsb1l9pU6j3148lQz8CZeXkbuh64=
+			W7A2Pz+M/uZ///zJJL324veRXkBEyRfKBL5kh2w3WhE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fxFmSUbSM6BP8XjjcxpRrG2axaidgL3+FVZgUXV21MI=
+			hAp9P2v6y4fMQtsbNn12DDzc4BD0luZmSFFliNpOMj4=
 			</data>
 		</dict>
 		<key>demo.alpha</key>
