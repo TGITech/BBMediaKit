@@ -6,3 +6,6 @@
 
 import Foundation
 import BBMediaKit
+
+class Empty {
+}

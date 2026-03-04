@@ -139,6 +139,7 @@ public protocol BBMediaSessionControlling : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
   var contentView: UIKit.UIView? { get set }
   #endif
+  var isAugmentationLayerEnabled: Swift.Bool { get set }
   var allowRenderVideoLayer: Swift.Bool { get set }
   var allowRenderAugmentationLayer: Swift.Bool { get set }
   var allowRenderCPU: Swift.Bool { get set }
@@ -185,6 +186,10 @@ final public class BBMediaSession : BBMediaKit.BBMediaSessionControlling {
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(playerLayer: QuartzCore.CALayer? = nil, player: AVFoundation.AVPlayer? = nil, configuration: BBMediaKit.BBSessionConfiguration)
   #endif
+  final public var isAugmentationLayerEnabled: Swift.Bool {
+    get
+    set
+  }
   final public var allowRenderVideoLayer: Swift.Bool {
     get
     set

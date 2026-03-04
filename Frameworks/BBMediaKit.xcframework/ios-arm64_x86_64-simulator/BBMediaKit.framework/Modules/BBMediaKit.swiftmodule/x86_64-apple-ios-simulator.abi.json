@@ -3379,6 +3379,97 @@
           },
           {
             "kind": "Var",
+            "name": "isAugmentationLayerEnabled",
+            "printedName": "isAugmentationLayerEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10BBMediaKit0A18SessionControllingP26isAugmentationLayerEnabledSbvp",
+            "mangledName": "$s10BBMediaKit0A18SessionControllingP26isAugmentationLayerEnabledSbvp",
+            "moduleName": "BBMediaKit",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10BBMediaKit0A18SessionControllingP26isAugmentationLayerEnabledSbvg",
+                "mangledName": "$s10BBMediaKit0A18SessionControllingP26isAugmentationLayerEnabledSbvg",
+                "moduleName": "BBMediaKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : BBMediaKit.BBMediaSessionControlling>",
+                "sugared_genericSig": "<Self where Self : BBMediaKit.BBMediaSessionControlling>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10BBMediaKit0A18SessionControllingP26isAugmentationLayerEnabledSbvs",
+                "mangledName": "$s10BBMediaKit0A18SessionControllingP26isAugmentationLayerEnabledSbvs",
+                "moduleName": "BBMediaKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : BBMediaKit.BBMediaSessionControlling>",
+                "sugared_genericSig": "<Self where Self : BBMediaKit.BBMediaSessionControlling>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10BBMediaKit0A18SessionControllingP26isAugmentationLayerEnabledSbvM",
+                "mangledName": "$s10BBMediaKit0A18SessionControllingP26isAugmentationLayerEnabledSbvM",
+                "moduleName": "BBMediaKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : BBMediaKit.BBMediaSessionControlling>",
+                "sugared_genericSig": "<Self where Self : BBMediaKit.BBMediaSessionControlling>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "allowRenderVideoLayer",
             "printedName": "allowRenderVideoLayer",
             "children": [
@@ -5493,6 +5584,98 @@
               "RawDocComment"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "isAugmentationLayerEnabled",
+            "printedName": "isAugmentationLayerEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10BBMediaKit0A7SessionC26isAugmentationLayerEnabledSbvp",
+            "mangledName": "$s10BBMediaKit0A7SessionC26isAugmentationLayerEnabledSbvp",
+            "moduleName": "BBMediaKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10BBMediaKit0A7SessionC26isAugmentationLayerEnabledSbvg",
+                "mangledName": "$s10BBMediaKit0A7SessionC26isAugmentationLayerEnabledSbvg",
+                "moduleName": "BBMediaKit",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10BBMediaKit0A7SessionC26isAugmentationLayerEnabledSbvs",
+                "mangledName": "$s10BBMediaKit0A7SessionC26isAugmentationLayerEnabledSbvs",
+                "moduleName": "BBMediaKit",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10BBMediaKit0A7SessionC26isAugmentationLayerEnabledSbvM",
+                "mangledName": "$s10BBMediaKit0A7SessionC26isAugmentationLayerEnabledSbvM",
+                "moduleName": "BBMediaKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
           },
           {
             "kind": "Var",
@@ -9645,7 +9828,7 @@
       "kind": "StringLiteral",
       "offset": 105,
       "length": 9,
-      "value": "\"1.0.202\""
+      "value": "\"1.0.203\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/OTT\/iOS\/BBMediaKit-Framework\/BBMediaKit\/Private\/CanvasView\/BBCanvasRenderer\/BBCanvasRendererComponents\/BBCanvasRendererPool\/BBCanvasRendererResultPool.swift",
