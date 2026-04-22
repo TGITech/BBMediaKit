@@ -13,12 +13,12 @@ import CoreText
 import CoreVideo
 import DatadogLogs
 import Foundation
+import ImageIO
 import MachO
 import Metal
 import MetalKit
 import QuartzCore
 import Security
-import SocketIO
 import Swift
 import UIKit
 import UniformTypeIdentifiers
@@ -130,9 +130,9 @@ public protocol BBMediaSessionErrorDelegate : AnyObject {
 }
 public protocol BBMediaSessionDelegate : BBMediaKit.BBMediaSessionErrorDelegate {
   func mediaSession(_ sender: BBMediaKit.BBMediaSession, didUpdateGlobalAugmentationState isGlobalAugmentationEnabled: Swift.Bool)
-  func mediaSessionDidBeginShotRendering(adID: Swift.String, adURL: Swift.String)
-  func mediaSessionDidEndShotRendering(adID: Swift.String, adURL: Swift.String)
-  func mediaSessionDidRegisterShot(_ sender: BBMediaKit.BBMediaSession, adID: Swift.String, adURL: Swift.String, averagePercenOfScreen: CoreFoundation.CGFloat, averagePercenOfAd: CoreFoundation.CGFloat, duration: CoreMedia.CMTime)
+  func mediaSessionDidBeginShotRendering(adID: Swift.String, logoID: Swift.String, adURL: Swift.String)
+  func mediaSessionDidEndShotRendering(adID: Swift.String, logoID: Swift.String, adURL: Swift.String)
+  func mediaSessionDidRegisterShot(_ sender: BBMediaKit.BBMediaSession, adID: Swift.String, logoID: Swift.String, adURL: Swift.String, averagePercenOfScreen: CoreFoundation.CGFloat, averagePercenOfAd: CoreFoundation.CGFloat, duration: CoreMedia.CMTime)
   func mediaSessionDidRegisterTap(_ sender: BBMediaKit.BBMediaSession, adID: Swift.String, redirectURL: Foundation.URL)
 }
 public protocol BBMediaSessionControlling : AnyObject {
