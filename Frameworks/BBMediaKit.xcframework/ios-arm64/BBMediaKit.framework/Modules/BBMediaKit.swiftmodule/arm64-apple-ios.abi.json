@@ -5605,7 +5605,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(playerLayer:player:configuration:)",
+            "printedName": "init(playerLayer:player:configuration:additionalDetails:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5656,11 +5656,40 @@
                 "name": "BBSessionConfiguration",
                 "printedName": "BBMediaKit.BBSessionConfiguration",
                 "usr": "s:10BBMediaKit22BBSessionConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10BBMediaKit0A7SessionC11playerLayer0D013configurationACSgSo7CALayerCSg_So8AVPlayerCSgAA22BBSessionConfigurationCtcfc",
-            "mangledName": "$s10BBMediaKit0A7SessionC11playerLayer0D013configurationACSgSo7CALayerCSg_So8AVPlayerCSgAA22BBSessionConfigurationCtcfc",
+            "usr": "s:10BBMediaKit0A7SessionC11playerLayer0D013configuration17additionalDetailsACSgSo7CALayerCSg_So8AVPlayerCSgAA22BBSessionConfigurationCSDyS2SGSgtcfc",
+            "mangledName": "$s10BBMediaKit0A7SessionC11playerLayer0D013configuration17additionalDetailsACSgSo7CALayerCSg_So8AVPlayerCSgAA22BBSessionConfigurationCSDyS2SGSgtcfc",
             "moduleName": "BBMediaKit",
             "declAttributes": [
               "AccessControl",
@@ -9517,224 +9546,224 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 10204,
+      "offset": 10309,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 10267,
+      "offset": 10372,
       "length": 33,
       "value": "\"com.bb.mediasession.videoOutput\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 10384,
+      "offset": 10489,
       "length": 36,
       "value": "\"com.bb.mediasession.metadataOutput\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 10503,
+      "offset": 10608,
       "length": 35,
       "value": "\"com.bb.mediasession.legibleOutput\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 10746,
+      "offset": 10851,
       "length": 17,
       "value": "\"didChangeOffset\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 10778,
+      "offset": 10883,
       "length": 8,
       "value": "\"offset\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 10845,
+      "offset": 10950,
       "length": 13,
       "value": "\"last_offset\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 10701,
+      "offset": 10806,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 11864,
+      "offset": 11969,
       "length": 33,
       "value": "\"BBMediaSession.adFileName.queue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 13146,
+      "offset": 13251,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 13212,
+      "offset": 13317,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 14340,
+      "offset": 14445,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 14377,
+      "offset": 14482,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 14414,
+      "offset": 14519,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 14631,
+      "offset": 14736,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 14673,
+      "offset": 14778,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 14710,
+      "offset": 14815,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "FloatLiteral",
-      "offset": 15020,
+      "offset": 15125,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 15617,
+      "offset": 15722,
       "length": 11,
       "value": "\"com.bbsdk\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 15640,
+      "offset": 15745,
       "length": 16,
       "value": "\"BBMediaSession\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 15805,
+      "offset": 15910,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 16181,
+      "offset": 16286,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 17230,
+      "offset": 17335,
       "length": 46,
       "value": "\"BBMediaSession.currentPlayheadTimecode.queue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 17889,
+      "offset": 17994,
       "length": 3,
       "value": "250"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "FloatLiteral",
-      "offset": 19495,
+      "offset": 19600,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "FloatLiteral",
-      "offset": 19603,
+      "offset": 19708,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 34716,
+      "offset": 34950,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "StringLiteral",
-      "offset": 34776,
+      "offset": 35010,
       "length": 27,
       "value": "\"bbmediakit.mediaDataQueue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 34933,
+      "offset": 35167,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 44821,
+      "offset": 45055,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "FloatLiteral",
-      "offset": 45910,
+      "offset": 46144,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/_BBMediaSessionImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 46165,
+      "offset": 46399,
       "length": 1,
       "value": "0"
     },
@@ -10028,56 +10057,56 @@
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 464,
+      "offset": 455,
       "length": 16,
       "value": "\"bbtestexternal\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1664,
+      "offset": 1655,
       "length": 41,
       "value": "\"BBSessionConfiguration.customerID.queue\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1813,
+      "offset": 1804,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2441,
+      "offset": 2432,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2468,
+      "offset": 2459,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3312,
+      "offset": 3303,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "Array",
-      "offset": 3341,
+      "offset": 3332,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vladimirkovtun\/work\/DTC_iOS\/BBMediaKit-Framework\/BBMediaKit\/Public\/BBSessionConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3359,
+      "offset": 3350,
       "length": 4,
       "value": "true"
     },

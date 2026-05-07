@@ -184,7 +184,7 @@ final public class BBMediaSession : BBMediaKit.BBMediaSessionControlling {
   @available(*, unavailable, message: "Use init(playerLayer:player:configuration:) instead.")
   public init()
   #if compiler(>=5.3) && $NonescapableTypes
-  public init?(playerLayer: QuartzCore.CALayer? = nil, player: AVFoundation.AVPlayer? = nil, configuration: BBMediaKit.BBSessionConfiguration)
+  public init?(playerLayer: QuartzCore.CALayer? = nil, player: AVFoundation.AVPlayer? = nil, configuration: BBMediaKit.BBSessionConfiguration, additionalDetails: [Swift.String : Swift.String]? = nil)
   #endif
   final public var isAugmentationLayerEnabled: Swift.Bool {
     get
