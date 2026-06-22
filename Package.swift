@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "BBMediaAugmentationKit",
     platforms: [
-        .iOS(.v13) // Adjust the minimum iOS version as needed
+        .iOS(.v17) // Adjust the minimum iOS version as needed
     ],
     products: [
         .library(
