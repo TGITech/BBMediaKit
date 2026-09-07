@@ -76,14 +76,15 @@ extension BBMediaKit.BBEnvironment : Swift.CustomStringConvertible {
     get
   }
 }
-public enum BBFpsOption : Swift.Double {
-  case fps59
-  case fps29
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Double)
-  #endif
-  public typealias RawValue = Swift.Double
-  public var rawValue: Swift.Double {
+public enum BBFpsOption {
+  case fps5994
+  case fps2997
+  public var value: Swift.Double {
+    get
+  }
+  public static func == (a: BBMediaKit.BBFpsOption, b: BBMediaKit.BBFpsOption) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
     get
   }
 }
@@ -273,6 +274,11 @@ public struct BBGameInfo : Swift.Codable {
   public let customerId: Swift.String?
   public let customerName: Swift.String?
   public let offsets: [BBMediaKit.BBOffset]
+  public let league: Swift.String?
+  public let seasonType: Swift.String?
+  public var zipDuration: Swift.Double {
+    get
+  }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -287,7 +293,6 @@ extension BBMediaKit.BBVideoResolution : Swift.RawRepresentable {}
 extension BBMediaKit.BBEnvironment : Swift.RawRepresentable {}
 extension BBMediaKit.BBFpsOption : Swift.Equatable {}
 extension BBMediaKit.BBFpsOption : Swift.Hashable {}
-extension BBMediaKit.BBFpsOption : Swift.RawRepresentable {}
 extension BBMediaKit.BBScalingMode : Swift.Equatable {}
 extension BBMediaKit.BBScalingMode : Swift.Hashable {}
 extension BBMediaKit.BBScalingMode : Swift.RawRepresentable {}

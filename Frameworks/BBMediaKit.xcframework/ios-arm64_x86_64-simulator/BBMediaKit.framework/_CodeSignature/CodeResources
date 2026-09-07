@@ -10,15 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JNbRgulEIOvYfxXwg3AUnvNirYA=
+		NuyhsJhOB2NZKBqEEIdqhaWoP2I=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		N2PL1I6aiY3iPZ3ccHw/Os1M7M4=
+		b4vEDiaIrfZK1SWpFiXtNdLjbMc=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		yVUJRwWHLH8opAjAUidZdjiR4BM=
+		TtzHQwqeS5Cuvsoq0TWv6vjMsnY=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		yVUJRwWHLH8opAjAUidZdjiR4BM=
+		TtzHQwqeS5Cuvsoq0TWv6vjMsnY=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fwvpP06EjkYnEnnmU1xqwpKEU9U=
+		3H+eySIEtWmAaOCdAgwC10Fy4ug=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		N2PL1I6aiY3iPZ3ccHw/Os1M7M4=
+		b4vEDiaIrfZK1SWpFiXtNdLjbMc=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		penCcNSMWuh8lRPQu4a50/Wf+Ws=
+		9RidCuxXLV/+rkolRNorLGcXxTk=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		penCcNSMWuh8lRPQu4a50/Wf+Ws=
+		9RidCuxXLV/+rkolRNorLGcXxTk=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		n9TEDPlF/V63SF4+YtGwlQGlZxM=
+		grmzAI0QskVZyhbju0OpL3IXFBE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		iHQAhEad4+YxoteJvamY4NHytDE=
+		j9CkKsrvC3bDHjdM12fNlL616TU=
 		</data>
 		<key>demo.alpha</key>
 		<data>
@@ -86,14 +86,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/fj4bFSX3Kps7z0rDplnj2y/iaxWLgu1/GHVMDlGPxw=
+			Qx6FOPr49B50oWS0VcCZAnuVMaPgbfPMzLIHtIqXdwI=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mBLc+f1oD3Jt8F/CdiPW7j+/YUcdGKCcWl2C7HaMH2w=
+			Y+81l/E+Lvt2zwncLcssLx+oEV0vO+jKDDIaCiVn19A=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -107,28 +107,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mBLc+f1oD3Jt8F/CdiPW7j+/YUcdGKCcWl2C7HaMH2w=
+			Y+81l/E+Lvt2zwncLcssLx+oEV0vO+jKDDIaCiVn19A=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KrMrUkpvYaiy/XzAwns/HjihiiEFZv8GALKclEaNEDI=
+			zjemcmHgExTKMvnkoivZwc3nYzj1FjvFUPoXNhuVdXY=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/fj4bFSX3Kps7z0rDplnj2y/iaxWLgu1/GHVMDlGPxw=
+			Qx6FOPr49B50oWS0VcCZAnuVMaPgbfPMzLIHtIqXdwI=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KtenWBHf0ZOKGgBCMYwd3ZRmlegcgGnEK9mxJYj4WQU=
+			LAUlUN+xu5cBN1FJbnOtfjKKp1k/D5rnQnWBAkid8SY=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -142,14 +142,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KtenWBHf0ZOKGgBCMYwd3ZRmlegcgGnEK9mxJYj4WQU=
+			LAUlUN+xu5cBN1FJbnOtfjKKp1k/D5rnQnWBAkid8SY=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zxt51koDcP7se+AidIVtYNxgadRrp51tDw4307Y1MIw=
+			mzStr0I+JkDooo3xzUN6YkRnpkrW0P3s/b0hfr7bfSk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hAp9P2v6y4fMQtsbNn12DDzc4BD0luZmSFFliNpOMj4=
+			4d9C04PvKBcwMjey1HSr3fal62itMXgTYOJTDatruoA=
 			</data>
 		</dict>
 		<key>demo.alpha</key>
