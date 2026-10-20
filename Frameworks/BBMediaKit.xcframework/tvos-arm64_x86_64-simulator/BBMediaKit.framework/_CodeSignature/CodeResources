@@ -10,47 +10,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		A0q/9cF/NCkpFtOyuQHAhOMnRLc=
+		46GWPqu2s2i3zE7nsRIF85mo63A=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.abi.json</key>
 		<data>
-		yVEWll3NloIabVVBa+aBV6ash8M=
+		A07U6dBNijhx3j3IZBSINH4RJ/c=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.private.swiftinterface</key>
 		<data>
-		p1GKuz9yn2vxT/m03bziASK0Xnw=
+		Lo25M6dm7WTmN5YyjxEQQwfUG4U=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		pbLPpGl6K6B/WQKVB7LpaDkaHFU=
+		wazpO4wNAvQZZUYXQvXhPATX1J0=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.swiftinterface</key>
 		<data>
-		p1GKuz9yn2vxT/m03bziASK0Xnw=
+		Lo25M6dm7WTmN5YyjxEQQwfUG4U=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		cgPXhw4ksQ1Dawp6h6JW867ibxQ=
+		4s2USQ+P37It4zoN263EsXDicwE=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
 		<data>
-		yVEWll3NloIabVVBa+aBV6ash8M=
+		A07U6dBNijhx3j3IZBSINH4RJ/c=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.private.swiftinterface</key>
 		<data>
-		g3QKANhM/KyQe4gTEKGI4g4j9zc=
+		ibLUj0uQ3kGpbiQT+FCnyjfw4EI=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		mrBDo5JhrY60Rqa3lzLcikt7X5Q=
+		U/j32PYzlvCPwBQNseeUo9Yn9Lo=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.swiftinterface</key>
 		<data>
-		g3QKANhM/KyQe4gTEKGI4g4j9zc=
+		ibLUj0uQ3kGpbiQT+FCnyjfw4EI=
 		</data>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		NF2924qIHWr5LZ6WA3bNKZPz0Pk=
+		/6AaALs2bo7nu78fhs6km0Fzxog=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		QZbrmvF7wr+r9PBiQbsg/GdypKo=
+		lczz4YkAcJvTdz4hXgdL+QPh50w=
 		</data>
 		<key>demo.alpha</key>
 		<data>
@@ -86,70 +86,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vMCKmrKQEzIZ2TZv7/rUSraGeILHkrFYvDtplQXV4Mc=
+			/isxL+swmCiEc/04VwJF5f2KPP867sy5A3wmsax8w4M=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AnL7im+7FtT1Ad6os9cjHe39PPuI4WjWGMBZ5R7ivSU=
+			yt51ArtlQ0t+K/Q2iVAT6IaC0Y8ygbw0jJZ/g8JTYUc=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xKnl4qcABWe4gkTStr3X2tAQePXpOIoaMGAULyzEtAY=
+			29kpmLYXCQP5phrwur0/YlvI6M88FTQoYSMFKFL0G3k=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AnL7im+7FtT1Ad6os9cjHe39PPuI4WjWGMBZ5R7ivSU=
+			yt51ArtlQ0t+K/Q2iVAT6IaC0Y8ygbw0jJZ/g8JTYUc=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7VZqa5fXljKzPJPGAX44JuGhKjZ1BBGYQk8almkQxpw=
+			aXXqSPB/KHeCY36hxfMxjXMWhl7A8MAk8cHO0ujhhrU=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vMCKmrKQEzIZ2TZv7/rUSraGeILHkrFYvDtplQXV4Mc=
+			/isxL+swmCiEc/04VwJF5f2KPP867sy5A3wmsax8w4M=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CO1y4wr2Bb904+EHlEKsHSfUsU6rMgQQ6AlzzNFbWZ4=
+			4i7LDn0ZVu3rZT90VH8NlY5VN2ECz6fpF92ugyc1pJQ=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aOFq4EYVgZiSuaNZUsWBig2olkk9wJnyeQiEFCohsAU=
+			jTLjFB30C2lFgfRLNInNkOC5O33e131FCVtXWPf3MZ8=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CO1y4wr2Bb904+EHlEKsHSfUsU6rMgQQ6AlzzNFbWZ4=
+			4i7LDn0ZVu3rZT90VH8NlY5VN2ECz6fpF92ugyc1pJQ=
 			</data>
 		</dict>
 		<key>Modules/BBMediaKit.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0O4CMK8wXiL4y5y6tQSUdvOQ/7HCBZWFN5Dzh9A1zR8=
+			xEEn7OWJj2NKNlVQ4ElKVvDdYwk0Fcm1KtNzDNy48Gw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uc5P5cdlxU/I9x1N9Zogl2f8j4iENZZlMlXHhb5Z6Zg=
+			t162BTZ6bMYSFI5YM3aZOVdWoSuUnzISJrTvmKFwhuk=
 			</data>
 		</dict>
 		<key>demo.alpha</key>
